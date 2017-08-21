@@ -1,0 +1,16 @@
+zh given en:
+F   0	0	0.277777777778	Aliko Dangote, April 10, 1957 - is a Nigerian business tycoon, billionaire, and $ 16.1 billion in March 2013.
+T   1	1	0.504854368932	He is the owner of the Dangote Group in Nigeria, which specializes in cement, sucrose and flour in Nigeria and other African countries such as Benin, Cameroon, Togo, Ghana, South Africa and Zambia.
+2	3	0.190476190476	He was "Forbes" magazine as "the richest man in Africa", and the world's rich 43rd.
+F   3	29	0.123456790123	At the age of 21, Dangeer borrowed money from his legendary millionaire's uncle, Uthman Van Tata, to engage in merchandise trade.
+4	18	0.20325203252	In 1981, Dange was founded in Lagos, Nigeria, "the Daniger Group of Nigeria", the company was only engaged in the beginning of the cement trade; in the early 1990s has become Nigeria's largest integrated large enterprises.
+5	22	0.3	The Group also covers the areas of port, real estate, telecommunications, oil and gas and steel and other fields.
+6	40	0.119047619048	In October 2013, Dung Te will be co-chair of the 2014 Davos World Economic Forum.
+7	11	0.192307692308	In the eyes of ordinary people in Nigeria, Dangger is keen on charity, is a low-key and full of good and sense of justice "big man".
+8	12	0.137931034483	According to reports, in recent years he has donated 100 million dollars in charity, including food, medical and poverty reduction in several areas.
+9	49	1.0	Nigerian wealth fails to trickle down
+10	50	0.153846153846	Dangote Sugar, Most Capitalised Company
+11	50	0.2	Aliko Dangote: The Ultimate Volume Player
+12	50	1.0	Aliko Dangote, Forbes profile
+13	44	1.0	Barau, A.S. (2007) The Great Attractions of Kano.
+14	45	1.0	Research and Documentation Directorate, Government House Kano

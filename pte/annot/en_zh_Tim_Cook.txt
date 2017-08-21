@@ -1,0 +1,86 @@
+en given zh:
+T   0	0	0.623655913978	Timothy Donald Cook (born November 1, 1960) is an American business executive, industrial engineer and developer.
+T   1	117	0.217948717949	Cook is the Chief Executive Officer of Apple Inc., previously serving as the company's Chief Operating Officer, under its founder Steve Jobs.
+T   2	4	0.298507462687	Cook joined Apple in March 1998 as senior vice president of worldwide operations and then served as Executive Vice President of worldwide sales and operations.
+T   3	97	0.244897959184	He was made Chief Executive on August 24, 2011.
+F   4	76	0.147826086957	During his tenure as the Chief Executive he has advocated for the political reformation of international and domestic surveillance, cybersecurity, corporate taxation both nationally and abroad, American manufacturing, and environmental preservation.
+F   5	75	0.236111111111	In 2014, Cook became the first Chief Executive of a Fortune 500 company to publicly identify as gay.
+F   6	77	0.30612244898	Cook also serves on the boards of directors of Nike, Inc. and the National Football Foundation.
+F   7	99	0.193181818182	In early 2012, he was awarded compensation of one million shares, vesting in 2016 and 2021, by Apple's board of directors, and in March 2015, he said he planned to donate his entire stock fortune to charity.
+T   8	8	0.37037037037	Cook was born in Mobile, Alabama, United States, He was baptized in a Baptist Church and grew up in nearby Robertsdale.
+T   9	9	0.568965517241	His father, Donald, was a shipyard worker, and his mother, Geraldine, worked at a pharmacy.
+T   10	13	0.37037037037	Cook graduated from Robertsdale High School.
+T   11	20	0.179487179487	He earned a Bachelor of Science (B.S.)
+T   12	22	0.27397260274	in industrial engineering from Auburn University in 1982, and his Master of Business Administration (MBA) from Duke University's Fuqua School of Business in 1988.
+T   13	20	0.179104477612	After graduating from Auburn University in 1982, Cook spent 12 years in IBM's personal computer business, ultimately serving as the director of North American fulfillment.
+F   14	56	0.151515151515	It was also during this time that Cook earned his MBA from Duke University, becoming a Fuqua Scholar in 1988.
+T   15	3	0.260273972603	Later, he served as Chief Operating Officer of the computer reseller division of Intelligent Electronics, and in 1997 became the Vice President for Corporate Materials at Compaq for six months.
+T   16	91	0.285714285714	In 1998, Steve Jobs asked Tim Cook to join Apple.
+F   17	100	0.266666666667	In a commencement speech at Auburn University, Cook said he decided to join Apple after meeting Jobs for the first time:
+18	72	0.143859649123	"Any purely rational consideration of cost and benefits lined up in Compaq's favor, and the people who knew me best advised me to stay at Compaq... On that day in early 1998 I listened to my intuition, not the left side of my brain or for that matter even the people who knew me best... no more than five minutes into my initial interview with Steve, I wanted to throw caution and logic to the wind and join Apple.
+F   19	21	0.205882352941	My intuition already knew that joining Apple was a once in a lifetime opportunity to work for the creative genius, and to be on the executive team that could resurrect a great American company."
+T   20	60	0.129032258065	His first position was Senior Vice President for worldwide operations.
+F   21	110	0.217948717949	In relation to the role, Cook was quoted as saying: "You kind of want to manage it like you're in the dairy business.
+F   22	9	0.145833333333	If it gets past its freshness date, you have a problem".
+F   23	51	0.217391304348	Cook closed factories and warehouses, and replaced them with contract manufacturers; this resulted in a reduction of the company's inventory from months to days.
+F   24	121	0.107843137255	Predicting its importance, his group invested in long-term deals such as advance investment in flash memory from 2005 onwards, guaranteeing stable supply of what became a key iPod Nano, then iPhone and iPad component.
+F   25	124	0.119047619048	Competitors at Hewlett-Packard, describing their cancelled TouchPad tablet computer, later said that it was made from "cast-off reject iPad parts."
+F   26	0	0.16	Cook's actions were credited with keeping costs under control and, combined with the company's design and marketing savvy, generated huge profits.
+F   27	71	0.193181818182	In January 2007, Cook was promoted to lead operations and served as Chief Executive in 2009, while Jobs was away on a leave of absence for health related issues.
+T   28	99	0.307692307692	In January 2011, Apple's board of directors approved a third medical leave of absence requested by Jobs.
+F   29	99	0.218181818182	During that time, Cook was responsible for most of Apple's day-to-day operations, while Jobs made most major decisions.
+T   30	97	0.236842105263	After Jobs resigned as CEO and became chairman of the board, Cook was named the new Chief Executive Officer of Apple Inc. on August 24, 2011.
+F   31	92	0.188405797101	Six weeks later, on October 5, 2011, Jobs died due to complications from pancreatic cancer.
+F   32	72	0.152838427948	Forbes contributor Robin Ferracone wrote in September 2011: "Jobs and Cook proceeded to forge a strong partnership, and rescued the company from its death spiral, which took it from $11 billion in revenue in 1995 down to less than $6 billion in 1998 ...
+F   33	105	0.182926829268	Under their leadership, the company went from its nadir to a remarkable $100 billion today".
+F   34	16	0.180327868852	In April 2012, Time included Cook on its annual "100 Most Influential People in the World" list.
+F   35	100	0.196078431373	On October 29, 2012, Cook made major changes to the company's executive team.
+F   36	21	0.2	Scott Forstall resigned as senior vice president of iOS, and became an advisor to Cook until he eventually departed from the company in 2013.
+F   37	103	0.115384615385	John Browett, who was Senior VP of retail, was dismissed six months after he commenced at Apple, when he received 100,000 shares worth US$60 million.
+F   38	72	0.169960474308	Forstall's duties were divided among four other Apple executives: design SVP Sir Jonathan Ive assumed leadership of Apple's human interface team; Craig Federighi became the new head of iOS software engineering; services chief Eddy Cue became responsible for Maps and Siri; and Bob Mansfield, previously SVP of hardware engineering, became the head of a new technology group.
+F   39	0	0.21	Cook's executive changes occurred after the third quarter of the fiscal year (Q3), when revenues and profits grew less than predicted.
+F   40	72	0.165829145729	One commentator said that Forstall was forced to step down, as Cook "decided to lance the boil as internal politics and dissent reached a key pitch".
+F   41	72	0.174672489083	Since becoming CEO, Cook focused upon building a harmonious culture that meant "weeding out people with disagreeable personalities—people Jobs tolerated and even held close, like Forstall"; although, another journalist said that "Apple's ability to innovate came from tension and disagreement."
+F   42	72	0.1875	On February 28, 2014, Cook made headlines when he challenged shareholders to "get out of the stock" if they didn't share the company's views on sustainability and climate change.
+F   43	72	0.199004975124	In May 2016, Cook traveled to China to meet with government officials there after the closure of Apple's online iTunes Store and iBooks store by the Chinese government.
+F   44	122	0.149659863946	Alongside Google vice-president Vint Cerf and AT&T CEO Randall Stephenson, Cook attended a closed-door summit held by President Barack Obama, on August 8, 2013, in regard to government surveillance and the Internet in the wake of the Edward Snowden NSA incident.
+F   45	72	0.155844155844	Following the December 2015 terrorist attack in San Bernardino, California, in which 14 people were killed by Rizwan Farook and Tashfeen Malik, the Federal Bureau of Investigation (FBI) solicited Apple to assist in "unlock[ing]" an iPhone 5C used by Farook.
+F   46	72	0.142857142857	On February 16, 2016, in response to a request by the Department of Justice, a federal magistrate judge ordered Apple to create a custom iOS firmware version that would allow investigators to circumvent the phone's security features.
+F   47	122	0.196581196581	Cook responded in an open letter, wherein he denounced the government's demands as constituting a "breach of privacy" with "chilling" consequences.
+T   48	107	0.222222222222	As Apple Inc. CEO, Cook regularly begins sending emails at 4:30 a.m. and previously held Sunday-night staff meetings by telephone to prepare for the next week.
+49	9	0.172839506173	Cook shared in May 2013 that his leadership strategy focused on people, strategy, and execution; he explained, "If you get those three right the world is a great place."
+F   50	72	0.182648401826	Under Cook's leadership, Apple has increased its donations to charity, and in 2013, he hired Lisa Jackson, formerly the head of the Environmental Protection Agency, to assist Apple with the development of its renewable energy activities.
+51	135	0.541666666667	Cook is a fitness enthusiast and enjoys hiking, cycling, and going to the gym.
+52	115	0.222222222222	Cook is known for being mostly solitary.
+53	9	0.163636363636	He uses an off-campus fitness center for privacy, and very little is known about his personal life.
+54	139	0.157894736842	He explained in October 2014 that he has sought to achieve a "basic level of privacy".
+55	122	0.178571428571	Cook was misdiagnosed with multiple sclerosis in 1996, an incident he said made him "see the world in a different way".
+56	21	0.184210526316	He has since taken part in charity fundraising, such as cycle races to raise money for the disease.
+57	121	0.164556962025	Cook later told an Auburn alumni magazine that his symptoms came from "lugging a lot of incredibly heavy luggage around."
+58	127	0.20987654321	In 2009, Cook said that he offered a portion of his liver to Jobs, since both share a rare blood type.
+59	124	0.152777777778	Cook claims that Jobs responded by yelling, "I'll never let you do that.
+60	41	0.133333333333	I'll never do that."
+61	32	0.178294573643	While delivering the 2010 commencement speech at Auburn University, Cook emphasized the importance of intuition during significant decision-making processes in his life, and further explained that preparation and hard work are also necessary to execute on intuition.
+62	12	0.153846153846	In the 2008-2009 election cycle Cook donated to the Barack Obama's first White House election.
+63	118	0.178082191781	While it had been reported in early 2011 that Cook is gay, Cook chose to keep his personal life private.
+64	24	0.0833333333333	He did publicly support LGBT rights.
+65	104	0.169642857143	In October 2014, the Alabama Academy of Honor inducted Cook, who spoke about his home state's record of lesbian, gay, bisexual, and transgender rights.
+66	115	0.16	The Academy of Honor is the highest honor Alabama gives its citizens.
+67	139	0.296703296703	On October 30, 2014, Cook publicly identified as gay in an editorial for Bloomberg Business, stating "I'm proud to be gay, and I consider being gay among the greatest gifts God has given me."
+68	72	0.193693693694	Cook also explained that he has been open about his sexuality "for years" and, while many people at Apple were aware of his sexual orientation, he sought to focus on Apple's products and customers rather than his personal life.
+69	100	0.127272727273	He ended the article by saying "We pave the sunlit path toward justice together, brick by brick.
+70	41	0.142857142857	This is my brick."
+71	75	0.223880597015	As a result, Cook became the first openly gay CEO on the Fortune 500 list.
+72	25	0.119205298013	In September 2015, Cook appeared on The Late Show with Stephen Colbert; when asked about what inspired him to publicly reveal his sexual orientation, he responded, "Where I valued my privacy significantly, I felt that I was valuing it too far above what I could do with other people, so I wanted to tell everyone my truth."
+73	1	0.157142857143	In 2015, Cook donated to Democratic senators Chuck Schumer and Patrick Leahy for their stances on eBook pricing and surveillance reform, respectively.
+74	100	0.130434782609	During the same election cycle he hosted a fundraiser for Senator Rob Portman.
+75	104	0.156862745098	In early March 2016, he donated to the election campaign of Democratic representative Zoe Lofgren from California, and in early June Cook hosted a private fundraiser along with Speaker of the U.S. House of Representatives Paul Ryan described by Politico as "a joint fundraising committee aimed at helping to elect other House Republicans."
+76	14	0.216666666667	According to Fortune, Cook has Apple stock worth about $120 million and options with a value of $665 million.
+77	128	0.152173913043	In March 2015, he said he planned to donate his entire stock fortune to charity.
+78	77	0.166666666667	Financial Times Person of the Year (2014)
+79	99	0.0909090909091	Ripple of Change Award (2015)
+80	140	0.0909090909091	Fortune Magazine's: World's Greatest Leader.
+81	70	0.105263157895	(2015)
+82	99	0.108108108108	Alabama Academy of Honor: Inductee. (2015)
+83	36	0.0882352941176	Human Rights Campaign's Visibility Award (2015)
+84	143	0.4	Tim Cook on Twitter

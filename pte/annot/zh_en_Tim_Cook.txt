@@ -1,0 +1,146 @@
+zh given en:
+T   0	0	0.623655913978	Timothy Donald Cook (Timothy Donald Cook, November 1, 1960), nickname Tim Cook (Tim Cook), is an American business manager, industrial engineer and industrial developer, the current Apple The company's chief executive.
+T   1	73	0.157142857143	From 1983 to 1994, Cook worked for IBM for 12 years and managed products and access to North America and Latin America.
+T   2	15	0.231707317073	From 1994 to 1997, Intelligent Electronics, a computer wholesaler, served as the chief executive officer of the Dealer Business Unit.
+T   3	15	0.260273972603	In 1997, he served as vice president of Compaq's materials department for about six months.
+T   4	2	0.298507462687	In the March of Steve Jobs, in March 1998, Cook joined Apple as president of the operations department.
+5	29	0.192307692308	In October 2005, Cook was officially promoted to chief operating officer of Apple.
+T   6	62	0.139534883721	In the Jobs during the sick has served three times the chief executive.
+T   7	3	0.0967741935484	Jobs announced his resignation in August 2011 after the official successor.
+T   8	8	0.37037037037	Tim Cook was born in Robertsdale, Alabama, southern United States.
+T   9	9	0.568965517241	His father, Donald Cook, is a shipyard worker and his mother, Geraldine, is a housewife.
+F   10	53	0.0810810810811	Mike and Gerald are his two brothers.
+F   11	9	0.171428571429	"Every Sunday Tim West (Cook) will call home and talk to his mother, and never forget it," Cook's father said.
+F   12	35	0.153846153846	Cook has been sent to the students during the boyhood.
+T   13	10	0.37037037037	In 1978, Cook graduated from Robertsdale (public) high school.
+F   14	76	0.216666666667	According to graduation records, from 7 to 12 grade, Cook has been a school model students.
+F   15	77	0.0952380952381	However, his parents did not know his school results so good.
+F   16	34	0.180327868852	In 1978, he took the second place in the school, at the graduation ceremony on behalf of the speech.
+F   17	10	0.214285714286	Fei Paris - Teachers who teach Cook Advanced English courses at Robertsdale High School - describe Cook as "smart student".
+F   18	54	0.10447761194	On behalf of Robertsdale, he has been involved in a summer student leader program organized by Americon Legion for high school students (grades 11-12).
+F   19	21	0.19298245614	In addition, Cook was also a member of the orchestra.
+T   20	11	0.179487179487	In 1978, Cook went to Auburn University and received a Bachelor of Engineering degree in 1982.
+F   21	51	0.236111111111	He specializes in industrial engineering is to people, materials, equipment as a target to be integrated, and to study how to improve, and then enhance the technical disciplines.
+T   22	12	0.27397260274	In 1988, he obtained a Master of Business Administration degree from Foucault Business School at Duke University in North Carolina.
+F   23	63	0.122807017544	However, Cook himself does not think he is learning business management, but to apprentices themselves.
+F   24	64	0.0833333333333	He said:
+F   25	67	0.165217391304	"When I decided to leave from Compaq into Apple, my mind was thinking that I was going to be an 'engineer', and I could get a different job in the new job.
+F   26	60	0.0967741935484	'The new identity of the' engineer 'made me learn that I was not emotional.
+27	16	0.0909090909091	Analysis to make judgments.
+28	17	0.176470588235	"- 2010 Cook at Auburn University graduation ceremony on a speech.
+29	0	0.0	Anecdotes
+30	17	0.173913043478	For Auburn University, he has a deep feeling.
+31	12	0.116666666667	The monument of Auburn University was filled with his office and apartment.
+32	61	0.178294573643	For a long time, Cook donated his alma mater Auburn University Institute of Technology, but his low-key personality is reluctant to publicize the matter, and Auburn University has always declared that "sponsorship of the school's alumni list and no Cook's name "
+33	52	0.125	Auburn University's American football team is well known.
+34	13	0.148936170213	In a report on Cook's character, the American media has specifically mentioned that Auburn University is "more famous than a school that has a high degree of business insight for students."
+35	6	0.104166666667	The school in 1957 and 2010, won the American Football League college league championship.
+36	0	0.115384615385	"Auburn Tigers Football" (Auburn Tigers Football) is Cook's favorite team.
+37	61	0.149122807018	On May 14, 2010, Cook spoke as an Apple operating officer at the graduation ceremony of Alumni University, where he was "an incredible thing that happened on his own journey of life."
+38	60	0.122448979592	He cited Lincoln The president's motto: "I am ready at all times because I believe that the opportunity will come at any time."
+39	36	0.111111111111	This statement later became his basic belief in the choice of universities, research institutes and occupations.
+40	34	0.154761904762	For example, he will always be envisaged in the elevator encountered when Steve Jobs can be the subject, or even first exercise their own "in the elevator encounter boss" when the situation.
+41	54	0.145833333333	"I believe in my efforts to believe in the meaning of eagerness."
+42	21	0.177419354839	In addition, he said: "If you do not think about the meaning of failure, but only think of success, will only let you go in the wrong direction "He emphasizes the value of failure," no one can go through the difficulties, frustration and regret can succeed. ""
+43	54	0.0925925925926	Do not think that any thing that happened in the past will cause obstacles to your upcoming event.
+44	52	0.125	Between 1983 and 1994, Cook worked for IBM.
+45	51	0.134328358209	Prior to office, he is responsible for managing the North American business unit, responsible for manufacturing and access to IBM products in North America and Latin America.
+46	15	0.21	In 1994, he left IBM and moved to Intelligent Electronics, a computer wholesaler, as chief operating officer in the Dealers Division, until 1997, when the company was merged with Microsoft.
+47	15	0.179487179487	From mid-1997 to early 1998, Cook served as vice president of Compaq's materials division for about six months.
+48	21	0.154639175258	January 7, 1998, Cook is still thinking that should not leave, Compaq Computer was selected as the US Economic Monthly "Fu Bishi" magazine in 1997 one of the most attention of the enterprise.
+49	16	0.27027027027	Invited by Steve Jobs, in March 1998, Cook entered Apple's office.
+50	15	0.194029850746	From 1998 to 2000, he served as president of the operations department.
+51	23	0.217391304348	Within two years, he reduced the company's warehousing inventory from 70 days to less than 10 days.
+52	21	0.144444444444	After 2000, contact with other operations outside the Department of Operations, the increase in the scope of work: business (sales) and back-end technical support services, until 2002.
+53	43	0.166666666667	In April 2001, Cook discontinued the partnership with Apple's dealer, Computerware.
+54	25	0.10447761194	The next month (May 2001), Apple began to set up stores, "selling their own goods."
+55	54	0.156862745098	From 2002 to 2005 he was responsible for managing "operations" and "sales".
+56	14	0.151515151515	In 2004, he was also responsible for managing the McKinta hardware business, which was also in charge of sales and manufacturing.
+57	35	0.15	May 2003, South Korea's Minister of Information and Communication Chen Daji to the United States to start a five-day four-night talks, travel is mainly with HP, Microsoft, global network equipment leader Cisco, Yahoo, Sun Microsystems and other major IT companies Top management team meeting.
+58	76	0.142857142857	Cook has met with Apple Computer.
+59	16	0.224489795918	July 2004 to September, Steve Jobs surgery sick leave, the first time by Cook Acting Apple CEO for three months.
+60	66	0.147058823529	Cook's position was the highest among all the vice presidents.
+61	74	0.111111111111	During the main events include:
+62	39	0.185185185185	July 14 published in the third quarter of 2004 financial report.
+63	36	0.165048543689	July 19, the new iPod models will be released, the 20GB iPod from 399 US dollars to 299 US dollars, 40GB of products from 499 US dollars to 399 US dollars, and ordered the production capacity of 15GB of products.
+64	16	0.173076923077	August 1, Steve Jobs first exposed to the fact that pancreatic cancer, told you: "Pancreatic resection is very smooth."
+65	17	0.217391304348	And for the first time to admit their condition.
+66	3	0.0952380952381	August published iMac G5.
+67	32	0.0454545454545	Published software Logic Pro 7 and Logic Express 7 in September
+68	19	0.125	As well as iTunes and other companies to work and so on.
+69	43	0.166666666667	According to the end of June 2004 and the end of August compared to the closing price, Apple's market value increased by 6.0%.
+70	78	0.107142857143	(The same period the Nasdaq index fell 10.2%).
+71	27	0.193181818182	Cook was promoted by Steve Jobs, October 14, 2005 Cook was officially promoted to Apple's senior vice president and chief operating officer (COO).
+72	43	0.199004975124	Jobs said to all the staff: "Over the past two years, Cook's management performance at work, created his promotion today," more express his expectations of Cook: "I hope Cook can continue to work, closer Apple executives are looking forward to Apple's global sales and distribution base, and managing the entire Apple business, "Apple executives said:" The rising manager of Cook will be part of the management team, the future will be responsible for Apple's global sales and distribution base, Department, including the Macintosh business.
+73	29	0.172413793103	After taking over as chief executive officer, Cook still personally in charge of Apple's supply chain.
+74	36	0.186666666667	While Apple's vice president of marketing, although in charge of store operations, but did not touch the field of regulation of inventory.
+75	6	0.289855072464	On the other hand, since November 18, 2005, Cook joined Nike (Nike) board of directors, became the first 11 members of the board.
+76	6	0.193181818182	"Cook has a wealth of experience from global manufacturing to management practices," and said Mr. Cook, who has been working for a world-renowned brand and has expertise, will be Nike Board of directors of the important assets.
+77	6	0.30612244898	"To explain the company invited him to join the board of directors of the reasons.
+78	63	0.15	It is reported that Cook's contribution to Nike is mainly in the e-commerce and store customer service department.
+79	52	0.161290322581	Cook is also responsible for the consultation between the iPhone and other telecommunications companies.
+80	16	0.230769230769	January 5, 2009, 14, Steve Jobs twice issued a statement on their own condition, and by Cook Acting Apple CEO.
+81	35	0.0588235294118	Cooks second agent executive major events include:
+82	39	0.127272727273	January 17, 2009, 2009 fiscal year first quarter financial report.
+83	36	0.140350877193	On January 27, Mark Papermaster was appointed vice president of hardware engineering.
+84	43	0.18085106383	In February, with the identity of Apple CEO, and personally went to the United States to visit, inspect the operation of overseas factories, Samsung CEO Li Zong Rong met.
+85	42	0.101449275362	On February 24th, the web browser Safari 4 came out.
+86	77	0.0810810810811	March 3, Mac Pro new models come out.
+87	77	0.0882352941176	March 11th, iPod Shuffle new models.
+88	77	0.0833333333333	March 17, iPhone OS 3.0 beta release.
+89	39	0.115384615385	April 20, 2009 fiscal year second quarter financial report.
+90	81	0.0952380952381	June 8, Apple Global Developers Conference opened (open iPhone 3GS)
+91	16	0.285714285714	June 29, 2009, Steve Jobs reinstated.
+92	16	0.206896551724	Beginning on January 17, 2011, Steve Jobs "to concentrate on nursed back to health" and dismissal, still served as acting agent by Cook.
+93	16	0.230769230769	March 2, Steve Jobs attended the iPad 2 conference, and return to work.
+94	21	0.129411764706	In March 2011, a South Korean lawmaker who visited the Silicon Valley Apple headquarters asked Cook: "How did the new product like the iPhone come out?"
+95	51	0.202380952381	Cook told the other: "From Korea's vision or technology, there are many to the end It is a smartphone that is nothing or can not be internationalized, and that the product is organized and organized.
+96	21	0.158273381295	April 20, 2011, in Apple's 2011 fiscal year second quarter financial report, Cook said: "Although Apple is looking forward to maintaining close cooperation with Samsung, but I think Samsung is part of the smart phone is We have been doing a lot of effort to solve this matter, but in the end still can only resort to justice.
+97	3	0.244897959184	August 24, 2011, Jabbers said, "can not continue to serve as Apple CEO of the day finally come."
+98	30	0.203703703704	Acting CEO Cook was appointed Chief Executive Officer.
+99	28	0.307692307692	Since then, Cook has become one of eight members of Apple's board of directors.
+100	17	0.266666666667	October 4, 2011, Cook for the first time hosted the conference, released the iPhone 4S.
+101	19	0.198198198198	At the time of IBM's office, there was a year of Christmas and New Year holidays, and he was willing to stay on the factory for the time being to keep the company on schedule.
+102	21	0.0823529411765	Ray Mays - his former boss and former senior business manager at IBM - said: "Cook 's pragmatic work attitude makes people feel happy to work with him.
+103	49	0.129411764706	At Campbell, Greg Petzsch, who was his boss, described Cook: "It is gentle and just tough."
+104	68	0.172932330827	In addition, he worked hard, and even considered "has been to the extent of exaggeration", know his people talk about Cook, the most easily think of the word is "work-holic" (meaning workaholic, work poisoning).
+105	33	0.182926829268	Often, get up at half past four every day to send and receive e-mail, always the first one into the company, but also the last one to leave the company from get off work.
+106	22	0.0882352941176	But even after a long meeting, still appear energetic.
+107	48	0.222222222222	Even for the next week's thing, in the evening with a telephone meeting.
+108	77	0.104166666667	For decades, he was on Sunday night to start a routine meeting every week morning.
+109	28	0.115384615385	Cook's work at work, January 2011 The New York Times published a representative story:
+110	21	0.217948717949	2010 due to the needs of the work, Cook was a business trip to Singapore, there are several other members of Apple counterparts.
+111	21	0.159574468085	In the business class Cook only briefly talked with his colleagues a few words, then readily come up with information to start research, he was in the Asian Apple staff to organize the recommendations.
+112	23	0.164556962025	From Apple's headquarters in California to Singapore to fly a total of 18 hours, and arrived in Singapore at six o'clock in the morning.
+113	51	0.152173913043	Cook quickly washed after staying at the hotel and went straight to the meeting place.
+114	36	0.142857142857	Meeting time up to 12 hours, the meeting continued until the evening, and even Apple employees in Asia are exhausted.
+115	52	0.222222222222	But Cook is the exception.
+116	51	0.145454545455	Although the staff in Asia has long been tired of turning over, Cook is ready to continue the next issue.
+117	1	0.217948717949	In the eyes of the work partners, Cook's pursuit of enthusiasm and perfect work attitude, he is the most similar part with Steve Jobs.
+118	1	0.20253164557	Juvenile era of Steve Jobs love, it is difficult to adapt to social life, compared with him, Cook is the standard "good boy".
+119	55	0.159420289855	Cook calmly tone, with a point of the southern American accent, people give him a title "South gentleman."
+120	49	0.153846153846	Compared to Steve Jobs, Cook spoke tone is gentle and gentle, people comment on his brief mostly "boring" or "boring."
+121	57	0.164556962025	However, unlike Steve Jobs used a lot of adjectives as rhetoric gorgeous, his "plain, calm calm" tone style but also makes a little sense of stability.
+122	21	0.196581196581	Unlike the usual taciturn style, in April 2009, Cook served as Acting Executive Director, in the second quarter of the financial conference call conference, he used "terrible software", "almost no garbage with the kind of hardware" to describe Competitor's Tablet PC.
+123	43	0.13698630137	LG Display president of the right to live, with Cook every year to meet two or three times.
+124	59	0.152777777778	2011, his feelings are: "I found Cook's biggest advantage, that is, will seriously listen to subordinates say, I think this should learn from him."
+125	76	0.0983606557377	"Cook has a high weight, but always very sincere to listen What we say is really moving. "
+126	16	0.136363636364	The relationship with Steve Jobs
+127	58	0.20987654321	In the "Become Jobs" in a book, Cook wanted to donate the liver to the need for liver transplantation of Jobs, but was rejected by Steve Jobs.
+128	16	0.205128205128	Cook was interviewed to confirm that he had tried to donate liver to Steve Jobs.
+129	1	0.12962962963	Cook's personality is afraid of life, shy, stiff.
+130	3	0.0909090909091	He often frowns, but does not necessarily mean angry or unhappy.
+131	60	0.111111111111	Always quiet, never speak loudly.
+132	55	0.174603174603	In 1996, Cook 36 years old, had been misdiagnosed by the doctor suffering from multiple sclerosis.
+133	6	0.12962962963	Although it was determined that the doctor was diagnosed, the matter also affected Cook's outlook on life.
+134	17	0.185714285714	After the incident in 1999, Cook published an article in the Alumni Journal at Auburn University that you can look at the world again.
+135	51	0.541666666667	Cook is a fitness enthusiast, like going to the gym, mountain climbing and cycling.
+136	55	0.150684931507	The media described him as "gym rat" ("gym mouse", dubbed the person staying in the gym all day).
+137	78	0.0967741935484	Is the United States bike player Armstrong (Lance Armstrong) super fans.
+138	49	0.101449275362	To Yosemite in California, Zion in Utah and other places.
+139	67	0.296703296703	On October 30, 2014, Cook admitted that he was gay in an article he wrote in Bloomberg BusinessWeek.
+140	52	0.142857142857	Cook's political stance is not clear.
+141	56	0.142857142857	He has a Republican in Northern California, but has sponsored the Democratic candidate Barack Obama (before he was elected president).
+142	8	0.158536585366	Cook argued that the late Robert Francis Kennedy was a respected person, though not really served as president of the United States, but was the most close political leader.
+143	84	0.4	Tim Cook's Twitter account
+144	84	0.3	Tim Cook's Sina Weibo

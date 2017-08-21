@@ -1,0 +1,52 @@
+en given zh:
+T   0	0	0.277777777778	Aliko Dangote GCON (born 10 April 1957) is a Nigerian billionaire, who owns the Dangote Group, which has interests in commodities.
+T   1	1	0.504854368932	The company operates in Nigeria and other African countries, including Benin, Ethiopia, Senegal, Cameroon, Ghana, South Africa, Togo, Tanzania, and Zambia.
+F   2	0	0.120689655172	As of February 2017, he had an estimated net worth of US$12.5 billion.
+F   3	2	0.190476190476	Dangote is ranked by Forbes magazine as the 67th richest person in the world and the richest in Africa; he peaked on the list as the 23rd richest person in the world in 2014.
+F   4	2	0.159420289855	He surpassed Saudi-Ethiopian billionaire Mohammed Hussein Al Amoudi in 2013 by over $2.6 billion to become the world's richest person of African descent.
+F   5	1	0.123456790123	Dangote hails from a very prominent business family that lived in Nigeria for many years.
+F   6	1	0.208791208791	He is the great grand son of Alhaji Alhassan Dantata, the richest African at the time of his death in 1955.
+F   7	0	0.208955223881	Aliko Dangote, an ethnic Hausa Muslim from Kano State, was born on 10 April 1957 into a wealthy Muslim family.
+F   8	1	0.133928571429	Dangote said, "I can remember when I was in primary school, I would go and buy cartons of sweets [sugar boxes] and I would start selling them just to make money.
+F   9	0	0.134615384615	I was so interested in business, even at that time."
+F   10	4	0.196078431373	The Dangote Group was established as a small trading firm in 1977, the same year Dangote relocated to Lagos to expand the company.
+T   11	1	0.285714285714	Today, it is a multi-trillion naira conglomerate with many of its operations in Benin, Ghana, Nigeria, and Togo.
+T   12	1	0.153846153846	Dangote has expanded to cover food processing, cement manufacturing, and freight.
+F   13	1	0.272727272727	The Dangote Group also dominates the sugar market in Nigeria and is a major supplier to the country's soft drink companies, breweries, and confectioners.
+F   14	1	0.225490196078	The Dangote Group has moved from being a trading company to being the largest industrial group in Nigeria including Dangote Sugar Refinery, Dangote Cement, and Dangote Flour.
+F   15	4	0.145631067961	In July 2012, Dangote approached the Nigerian Ports Authorities to lease an abandoned piece of land at the Apapa Port, which was approved.
+F   16	2	0.0444444444444	He later built facilities for his flour company there.
+F   17	4	0.165354330709	In the 1990s, he approached the Central Bank of Nigeria with the idea that it would be cheaper for the bank to allow his transport company to manage their fleet of staff buses, a proposal which was also approved.
+F   18	1	0.217391304348	In Nigeria today, Dangote Group with its dominance in the sugar market and refinery business is the main supplier (70% of the market) to the country's soft drinks companies, breweries and confectioners.
+F   19	1	0.222222222222	It is the largest refinery in Africa and the third largest in the world, producing 800,000 tonnes of sugar annually.
+F   20	1	0.204301075269	Dangote Group owns salt factories and flour mills and is a major importer of rice, fish, pasta, cement and fertiliser.
+21	5	0.137931034483	The company exports cotton, cashew nuts, cocoa, sesame seed and ginger to several countries.
+22	5	0.3	It also has major investments in real estate, banking, transport, textiles and oil and gas.
+23	1	0.148148148148	The company employs over 11,000 people and is the largest industrial conglomerate in West Africa.
+24	4	0.134020618557	Dangote has diversified into telecommunications and has started building 14,000 kilometres of fibre optic cables to supply the whole of Nigeria.
+25	4	0.19587628866	As a result, Dangote was honoured in January 2009 as the leading provider of employment in the Nigerian construction industry.
+26	1	0.137254901961	He said, "Let me tell you this and I want to really emphasize it...nothing is going to help Nigeria like Nigerians bringing back their money.
+27	1	0.170731707317	If you give me $5 billion today, I will invest everything here in Nigeria.
+28	2	0.0888888888889	Let us put our heads together and work."
+29	4	0.165137614679	Dangote played a prominent role in the funding of Olusegun Obasanjo's re-election bid in 2003, to which he gave over N200 million (US$1M).
+30	2	0.134328358209	He contributed N50 million (US$0.25M) to the National Mosque under the aegis of "Friends of Obasanjo and Atiku".
+31	2	0.093023255814	He contributed N200 million to the Presidential Library.
+32	4	0.0943396226415	These highly controversial gifts to members of the ruling Party [PDP] have generated significant concerns despite highly publicised anti-corruption drives during Obasanjo's second term.
+33	1	0.117647058824	On 23 May 2010, Britain's Daily Mirror reported that Dangote was interested in buying a 16 percent stake in Premiership side Arsenal belonging to Lady Nina Bracewell-Smith.
+34	12	0.0769230769231	Dangote later denied these rumours.
+35	4	0.184210526316	On 14 November 2011, Dangote was awarded Nigeria's second highest honour, the Grand Commander of the Order of the Niger (GCON) by the President, Goodluck Jonathan.
+36	2	0.122222222222	Dangote reportedly added $9.2 billion to his personal wealth in 2013, according to the Bloomberg Index, now making him the 30th richest person in the world, in addition to being the richest person in Africa.
+37	4	0.137254901961	In 2014, the Nigerian government said Dangote had donated 150 million Naira (US$750,000) to halt the spread of ebola.
+38	1	0.164556962025	In May 2015, Dangote expressed interest in purchasing the English football team Arsenal.
+39	2	0.0952380952381	He stated that if he was able to make the purchase he would fire the club's long-standing manager Arsene Wenger.
+40	2	0.142857142857	Dangote was named as the Forbes Africa Person of the Year 2014.
+41	1	0.146153846154	The other nominees for the award were South Africa's Public Protector, Thuli Madonsela, Nigerian author, Chimamanda Ngozi Adichie, Director-General of the Securities and Exchange Commission, (SEC), Arunma Oteh, and President of the African Development Bank, Donald Kaberuka.
+42	1	0.189189189189	In 2013, Alhaji Dangote and six other prominent Nigerians were conferred Honorary Citizenship of Arkansas State by Governor Mike Beebe who also proclaimed May 30 of every year as Nigeria Day in the US.
+43	4	0.116666666667	The other prominent Nigerians are: Chief Ms. Temitope Ajayi, the President and CEO of Nigerian-American Agricultural Empowerment Programme; Governor Rabiu Kwankwaso of Kano State; Dr. Akinwunmi Adesina, Minister of Agriculture and Rural Development; Prof. Tajudeen Gbadamosi, a former lecturer of University of Lagos; Prof. Ade Adefuye, the Nigeria's Ambassador to the United States; Prof. Julius Okojie, the Executive Secretary of the National Universities Commission.
+44	13	1.0	Barau, A.S. (2007) The Great Attractions of Kano.
+45	14	1.0	Research and Documentation Directorate, Government House Kano
+46	0	0.128205128205	Fayemiwo, M.A.
+47	0	0.125	& Neal, M.M.
+48	4	0.175257731959	(2013) Aliko Mohammad Dangote The Biography of the Richest Black Person in the World, Strategic Book Publishing ISBN 9781618978851
+49	9	1.0	Nigerian wealth fails to trickle down
+50	12	1.0	Aliko Dangote, Forbes profile

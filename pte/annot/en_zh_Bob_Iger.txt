@@ -1,0 +1,80 @@
+en given zh:
+T   0	0	0.285714285714	Robert Allen Iger (; born February 10, 1951) is an American businessman who is chairman and chief executive officer (CEO) of The Walt Disney Company.
+F   1	1	0.223300970874	Before Disney, Iger served as the president of ABC Television from 1994 to 1995 and the president and chief operating officer (COO) of Capital Cities/ABC, Inc. from 1995 until Disney's acquisition of the company in 1996.
+T   2	1	0.322916666667	He was named president and COO of Disney in 2000, and later succeeded Michael Eisner as CEO in 2005, after a successful effort by Roy E. Disney to shake-up the management of the company.
+F   3	20	0.179487179487	As part of his yearly compensation, Iger earned $44.9 million in 2015.
+F   4	3	0.132596685083	During Iger’s tenure, Disney broadened the company's roster of intellectual properties and its presence in international markets; Iger oversaw the acquisitions of Pixar in 2006 for $7.4 billion, Marvel Entertainment in 2009 for $4 billion, and Lucasfilm in 2012 for $4.06 billion, as well as the expansion of the company's theme park resorts in East Asia, with the introduction of Hong Kong Disneyland Resort and Shanghai Disney Resort in 2005 and 2016, respectively.
+F   5	12	0.153846153846	Iger was also a driving force behind the reinvigoration of Walt Disney Animation Studios and the branded-release strategy of its film studio's output.
+F   6	11	0.159574468085	Under Iger's control, Disney has experienced increases in revenue across its various divisions, with the company's market capitalization value increasing from $48.4 billion to $163 billion over a period of eleven years.
+F   7	7	0.0947368421053	As a result, Disney has been recognized as one of the "World's Most Reputable Companies" by Forbes (2006–2015), one of "America's Most Admired Companies" by Fortune Magazine (2009–2015), one of the “World's Most Respected Companies" by Barron’s (2009–2014), a “Best Place to Launch a Career” by BusinessWeek Magazine (2006–2010), and a "Company of the Year" by Yahoo Finance (2013).
+F   8	3	0.107142857143	Over the course of his career, Iger has been recognized by several major media publications for his leadership at Disney, having been named one of Fortune Magazine's "25 Most Powerful People in Business" (2006, 2007), a "Top Gun CEO" by Forbes (2009), a "Best CEO" by Institutional Investor Magazine (2008-2011), "CEO of the Year" by MarketWatch (2006), and "CEO of the Year" by Chief Executive Magazine (2014).
+F   9	10	0.148936170213	Iger has also been inducted as a member of several organizations, including the American Academy of Arts & Sciences, the Broadcasting and Cable Hall of Fame, and the Toy Industry Hall of Fame.
+T   10	0	0.206349206349	Iger was born to a Jewish family in New York City.
+F   11	0	0.2	Iger was raised in the Long Island town of Oceanside, New York, where he attended the Fulton Avenue School and graduated from Oceanside High School in 1969.
+F   12	10	0.142857142857	In 1973, he graduated magna cum laude from the Roy H. Park School of Communications at Ithaca College with a Bachelor of Science degree in Television and Radio.
+F   13	7	0.164705882353	Iger is the son of Mimi (née Tunick) and Arthur L. Iger.
+F   14	10	0.142857142857	His father was a World War II veteran who served as the Executive Vice President and General Manager of the Greenvale Marketing Corporation, and was also a Professor of Advertising and Public Relations.
+F   15	18	0.0652173913043	His mother worked at Boardman Junior High School in Oceanside.
+F   16	10	0.157142857143	Iger began his media career in 1972 as the host of “Campus Probe,” an Ithaca College television show.
+F   17	1	0.115384615385	He dreamed of becoming a news anchor while he worked as a weatherman in Ithaca for five months, before shifting his career goals.
+F   18	10	0.172413793103	In 1974, Iger joined the American Broadcasting Company (ABC).
+F   19	0	0.126984126984	In 1989, Iger was named to head up ABC Entertainment.
+20	7	0.136752136752	He served as President of the ABC Network Television Group from January 1993 to 1994, while being appointed as Capital Cities/ABC Senior Vice President in March 1993 and Executive Vice President in July 1993.
+F   21	0	0.16	In 1994, Iger was named President and Chief Operating Officer of ABC's corporate parent, Capital Cities/ABC.
+F   22	0	0.172839506173	In 1996, The Walt Disney Company purchased Capital Cities/ABC and renamed it ABC, Inc., where Iger remained President until 1999.
+F   23	15	0.165048543689	On February 25, 1999, Disney named Iger the President of Walt Disney International, the business unit that oversees Disney's international operations, as well as Chairman of the ABC Group.
+F   24	15	0.125	Disney called the change a promotion for Iger.
+F   25	7	0.1	Some viewed this claim skeptically since Iger was being removed from day-to-day authority at the struggling ABC.
+T   26	0	0.148148148148	Disney named Iger the President and Chief Operating Officer (COO) on January 24, 2000, making him Disney's No.
+F   27	1	0.163636363636	2 executive under Chairman and CEO, Michael Eisner.
+F   28	10	0.151898734177	Disney had been without a separate president since Eisner assumed the role following the departure of Michael Ovitz in 1997, after sixteen months at Disney.
+F   29	10	0.136363636364	As a result of a a successful effort by Roy E. Disney to shake up the management of the company, Disney begun a search for the next CEO to replace Eisner.
+F   30	1	0.165048543689	On March 13, 2005, Disney announced that Iger would succeed Michael Eisner as CEO, and Iger was placed in charge of day-to-day operations though Eisner held the title of CEO until he resigned on September 30, 2005.
+F   31	12	0.164556962025	On March 26, Iger reassigned Peter Murphy, Disney's Chief Strategic Officer, and pledged to disband the company's Strategic Planning division.
+F   32	10	0.164383561644	Iger also vowed to restore much of the decision-making authority that the division had assumed to the company's individual business units.
+F   33	1	0.114942528736	Disney reconciled with former board members Roy E. Disney and Stanley Gold, who in July 2005 dropped their "Save Disney" campaign and agreed to work with Iger.
+F   34	12	0.15873015873	In the process, Roy E. Disney was named a Director Emeritus and Consultant.
+F   35	3	0.154761904762	On January 24, 2006, Disney announced it would acquire Pixar for $7.4 billion in an all-stock transaction.
+F   36	12	0.176470588235	The merger installed animator John Lasseter as Chief Creative Officer of the Pixar and Principal Creative Advisor for Walt Disney Imagineering, the division that designs theme park attractions.
+F   37	1	0.117647058824	This acquisition made Steve Jobs Disney's top shareholder, with seven percent of outstanding shares, and gave him a new seat on Disney's Board of Directors.
+F   38	12	0.18085106383	In the same year, Iger also re-acquired the rights to Walt Disney's first star, Oswald the Lucky Rabbit, from NBCUniversal by releasing sportscaster Al Michaels from ABC Sports to NBC Sports.
+F   39	12	0.146666666667	In August 2009, Iger spearheaded negotiations that led Disney to acquire Marvel Entertainment and its associated assets for $4 billion.
+F   40	10	0.171428571429	As of August 2014, Disney has recouped over $4 billion at the box office through the Marvel movies.
+F   41	25	0.0952380952381	Roy E. Disney issued this statement regarding Iger:
+F   42	7	0.173228346457	Animation has always been the heart and soul of The Walt Disney Company, and it is wonderful to see Bob Iger and the company embraces that heritage by bringing the outstanding animation talent of the Pixar team back into the fold.
+F   43	12	0.148148148148	This clearly solidifies The Walt Disney Company's position as the dominant leader in motion picture animation and we applaud and support Bob Iger's vision.
+F   44	0	0.126582278481	Iger has cited international expansion, technological innovation, and a renewed focus on traditional animation as Disney's top strategic priorities.
+F   45	16	0.182795698925	On October 7, 2011, Disney announced that Iger would become Chairman of the Board, following John Pepper's retirement from the board in March 2012.
+F   46	15	0.102564102564	On Tuesday November 15, 2011, Apple, Inc., now led by CEO Tim Cook after Steve Jobs's death, named Iger as a Director, and named Genentech Chairman Arthur Levinson, an Apple board member with a past membership on rival Google's board, as Jobs's replacement in the role of non-executive Chairman; both will serve on Apple's Audit Committee.
+F   47	3	0.161616161616	Jobs had worked with Iger in the Pixar acquisition which had made Jobs the largest shareholder of Disney, and Iger licensed ABC shows to Apple for purchase through iTunes.
+F   48	10	0.176470588235	In October 2012, Iger signed a deal with film producer George Lucas to purchase Lucasfilm Ltd. for $4 billion following several months of negotiations between the two men.
+F   49	3	0.240506329114	As a result, Disney acquired the rights to the Star Wars multimedia franchise and Indiana Jones.
+F   50	1	0.1	Disney has since embarked on plans to produce a series of Star Wars films and an Indiana Jones one.
+51	7	0.13	Following its release on December 18, 2015, Star Wars: The Force Awakens grossed over $2 billion at the box office.
+52	24	0.181818181818	In addition, Iger has announced that the $5.5 billion Shanghai Disney Resort will open its doors on June 16, 2016.
+53	12	0.145833333333	Thomas O. Staggs, former Disney CFO and Chairman of Walt Disney Parks and Resorts, was named chief operating officer (COO) on On February 5, 2015, making him Iger's heir-apparent.
+54	24	0.151898734177	However on April 4, 2016, Disney announced that Staggs and the company had mutually agreed to part ways, and Staggs stepped down as COO effective May 6, 2016.
+55	22	0.103092783505	It was reported that Staggs failed to receive assurances from the board to succeed Iger, as the board decided instead to widen the executive search, while Iger also did not persuade Staggs to stay on.
+56	24	0.150943396226	Iger contract as Disney's Chairman and CEO was originally planned to run until June 30, 2018, but Disney announced in March 2017 that it was extending Iger's term to July 2, 2019 and said he would serve as a consultant for the following three years.
+57	16	0.162162162162	During the Walt Disney Company's first quarter earnings call (in 2017), Bob Iger stated "If it's in the best interest of the company to expand my tenure, I'm open to that..."
+58	7	0.157407407407	In November 2015, the Oakland Raiders and San Diego Chargers named Iger to head their effort to build a new stadium hosting both teams in Carson, California.
+59	10	0.179487179487	Had the bid been accepted by the NFL, Iger would have had the option to purchase a minority ownership in one of the teams.
+60	23	0.16	Iger has been married twice.
+61	22	0.0877192982456	His first marriage to Kathleen Susan Iger ended in divorce.
+62	17	0.0952380952381	They had two children: Kathleen Pamela Iger and Amanda Iger.
+63	1	0.141025641026	In 2005, Kathleen Pamela married Jarrod Alan Cushing in a civil ceremony at the Blithewold Mansion, Gardens and Arboretum in Rhode Island.
+64	0	0.171052631579	In 1995, Iger married Willow Bay in an interfaith Jewish and Roman Catholic service in Bridgehampton, New York.
+65	8	0.153846153846	They have two children: Robert Maxwell "Max" Iger, and William Iger.
+66	24	0.148148148148	Iger co-chaired a fundraiser for Hillary Clinton's presidential campaign on August 22, 2016.
+67	24	0.163636363636	Iger was named to President-elect Trump's Strategic and Policy Forum on December 2, 2016.
+68	15	0.164705882353	He resigned from Trump's cabinet on June 1, 2017 after Trump withdrew the United States from the Paris Climate Agreement.
+69	10	0.175824175824	In June 2012, Steven Spielberg, founder of the USC Shoah Foundation Institute for Visual History and Education, presented Iger with the Ambassador for Humanity Award, the Institute's highest honor.
+70	10	0.178082191781	Iger was recognized for his support of the Institute’s work, his longtime philanthropy, and his leadership role in corporate citizenship.
+71	9	0.137931034483	Iger was presented with The Milestone Award from the Producers Guild of America (PGA) in 2014.
+72	7	0.129032258065	The award is the PGA’s highest recognition for an individual or team who has made historic contributions to entertainment.
+73	10	0.19696969697	In May 2015, Iger was named to the 25th Annual Broadcasting & Cable Hall of Fame.
+74	24	0.142857142857	He was honored for his stewardship of the Walt Disney Company and his strategic vision focused on generating the best creative content possible, fostering innovation and utilizing the latest technology, and expanding into new markets around the world.
+75	15	0.182926829268	In October 2015, the Toy Industry Association (TIA) inducted Iger into the Toy Industry Hall of Fame.
+76	7	0.146788990826	He was selected by members of TIA in recognition of his significant contributions to the industry, and the impact his work has had on the lives of children worldwide.
+R   77	0	0.0	Corporate biography
+R   78	22	0.0576923076923	 Media related to Bob Iger at Wikimedia Commons

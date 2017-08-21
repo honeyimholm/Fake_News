@@ -1,0 +1,26 @@
+en given zh:
+F   0	0	0.16265060241	The Korean War (in South Korean Hangul: 한국전쟁; Hanja: 韓國戰爭; RR: Hanguk Jeonjaeng, "Korean War"; in North Korean Chosŏn'gŭl: 조국해방전쟁; Hancha: 祖國解放戰爭; MR: Choguk haebang chǒnjaeng, "Fatherland Liberation War"; 25 June 1950 – 27 July 1953) began when North Korea invaded South Korea.
+T   1	8	0.392857142857	The United Nations, with the United States as the principal force, came to the aid of South Korea.
+T   2	8	0.320754716981	China came to the aid of North Korea, and the Soviet Union gave some assistance.
+T   3	1	0.384615384615	Korea was ruled by Imperial Japan from 1910 until the closing days of World War II.
+T   4	2	0.480392156863	In August 1945, the Soviet Union declared war on Imperial Japan, as a result of an agreement with the United States, and liberated Korea north of the 38th parallel.
+T   5	20	0.140350877193	U.S. forces subsequently moved into the south.
+T   6	8	0.357142857143	By 1948, as a product of the Cold War between the Soviet Union and the United States, Korea was split into two regions, with separate governments.
+T   7	4	0.254716981132	Both claimed to be the legitimate government of all of Korea, and neither accepted the border as permanent.
+F   8	0	0.207547169811	The conflict escalated into open warfare when North Korean forces—supported by the Soviet Union and China—moved into the south on 25 June 1950.
+T   9	11	0.384615384615	On 27 June, the United Nations Security Council authorized the formation and dispatch of UN forces to Korea to repel what was recognized as a North Korean invasion.
+T   10	8	0.363636363636	Twenty-one countries of the United Nations eventually contributed to the UN force, with the United States providing 88% of the UN's military personnel.
+T   11	26	0.243055555556	After the first two months of war, South Korean and U.S. forces rapidly dispatched to Korea were on the point of defeat, forced back to a small area in the south known as the Pusan Perimeter.
+T   12	29	0.110169491525	In September 1950, an amphibious UN counter-offensive was launched at Incheon, and cut off many North Korean troops.
+F   13	32	0.0666666666667	Those who escaped envelopment and capture were forced back north.
+T   14	26	0.19512195122	UN forces rapidly approached the Yalu River—the border with China—but in October 1950, mass Chinese forces crossed the Yalu and entered the war.
+T   15	34	0.0821917808219	The surprise Chinese intervention triggered a retreat of UN forces which continued until mid-1951.
+F   16	26	0.215827338129	After these reversals of fortune, which saw Seoul change hands four times, the last two years of fighting became a war of attrition, with the front line close to the 38th parallel.
+F   17	28	0.257142857143	The war in the air, however, was never a stalemate.
+F   18	31	0.166666666667	North Korea was subject to a massive bombing campaign.
+F   19	34	0.208791208791	Jet fighters confronted each other in air-to-air combat for the first time in history, and Soviet pilots covertly flew in defense of their communist allies.
+T   20	30	0.16049382716	The fighting ended on 27 July 1953, when an armistice was signed.
+T   21	31	0.328125	The agreement created the Korean Demilitarized Zone to separate North and South Korea, and allowed the return of prisoners.
+T   22	32	0.175438596491	However, no peace treaty has been signed, and the two Koreas are technically still at war.
+F   23	5	0.185714285714	As a war undeclared by all participants, the conflict helped bring the term "police action" into common use.
+F   24	8	0.265432098765	It also led to the permanent alteration of the balance of power within the United Nations, where Resolution 377—passed in 1950 to allow a bypassing of the Security Council if that body could not reach an agreement—led to the General Assembly displacing the Security Council as the primary organ of the UN.

@@ -1,0 +1,27 @@
+zh given en:
+T   0	0	0.285714285714	Robert Allen 'Bob' Iger, February 10, 1951 - was born in New York, Long Island, Jewish, Walt Disney Company as Chairman and Chief Executive Officer.
+T   1	2	0.322916666667	He became president and chief executive officer of Disney in 2000, and then in October 2005, he succeeded Mike Eisner as president and chief executive officer.
+T   2	0	0.214285714286	In March 2012, he succeeded John E. Pepper, Jr. as chairman and chief executive officer.
+T   3	49	0.240506329114	Under the leadership of Igor, Disney acquired the Brick Animation Studio in 2006, then acquired Amazing Entertainment Limited in 2009, and acquired Lucas Pictures in 2012, further expanding the Disney media territory.
+T   4	5	0.134615384615	He is also a member of Apple's board of directors.
+F   5	21	0.155555555556	On September 12, 2005, Chinese Vice President Zeng Qinghong, accompanied by Chief Executive Donald Tsang, co-hosted the opening ceremony of Hong Kong Disneyland with Hong Kong Chief Executive Officer Mike Eisner and President Robert Iger, eye.
+F   6	6	0.119266055046	Iger is seeking truth from facts, reform and rectification without hesitation, seeing Disney California Adventure Park opened six years of unattractive, in October 2007 proposed five years $ 1.1 billion update plan.
+F   7	36	0.175925925926	He said at the Proposal: "The reality is that the Disney California Adventure Park is out of the question, the operating conditions and the rate of return are not ideal, the only solution is to build and expand."
+F   8	65	0.153846153846	June 15, 2012, Robert · Iger and his partner friend Mickey Mouse co-chaired a colorful, grand grand Disney California Adventure Park re-opening ceremony, the official launch of the two most anticipated theme park "anti-car king" and "beauty street".
+F   9	70	0.15625	The celebration of the park in the five-year expansion of the process added more than 20 new recreational projects and performances.
+F   10	73	0.19696969697	In August 2012, after the completion of the expansion of the Disneyland California Adventure Park, Iger said the number of admission has also increased significantly.
+F   11	6	0.159574468085	In total, Disney's revenue in the theme park in the third quarter of 2012 could rise by 9% to $ 3.44 billion.
+F   12	38	0.18085106383	April 8, 2011, the Shanghai Disneyland project officially announced the start, Iger to Walt Disney CEO and Walt Disney Paradise and Resort responsible person Thomas.
+F   13	18	0.128205128205	Thomas Staggs (Thomas Staggs) together with the station for the groundbreaking ceremony.
+F   14	0	0.159090909091	On April 10, Robert Iger said that China is fully capable of accommodating two Disneyland, and Disney is confident of the future development of Hong Kong Disneyland.
+F   15	75	0.182926829268	May 5, 2016, the CPC Central Committee General Secretary, State President Xi Jinping met in the Great Hall of the US-China Trade Committee Vice Chairman, the United States Disney chairman Iger.
+F   16	45	0.182795698925	September 21, 2011, Walt Disney Company announced that it has reached an exclusive agreement, will be in Florida, Disney animal kingdom to build the film "Avatar" theme park.
+F   17	65	0.145833333333	"Avatar" director James Cameron and Disney President and CEO Robert Iger attended the press conference.
+F   18	3	0.153846153846	Robert Iger received $ 40.2 million in annual salary and dividends in 2012, 20 percent more than the previous year.
+F   19	3	0.137931034483	Of which the salary is 2.5 million, the dividend is 16.5 million, 9.53 million for the stock and 4 million other compensation amount.
+F   20	3	0.179487179487	According to the announcement, Iger in 2014 received 2.5 million US dollars in basic salary, 22.8 million US dollars bonus, 17.3 million US dollars stock awards, and other benefits of 3.9 million US dollars.
+F   21	3	0.166666666667	Eiger's total annual salary for fiscal year 2015 includes a basic salary of $ 2.5 million (about HK $ 19.5 million), cash bonus of $ 22.3 million (approximately HK $ 174 million) and equity rewards of approximately US $ 17.1 million (approximately HK $ 133 million) The
+F   22	73	0.194029850746	In October 2011, according to the Wall Street Journal China News, Walter-Disney said that Robert Iger will retire to the post of chief executive in 2015.
+F   23	60	0.16	The company said that Iger's successor has not yet been determined.
+F   24	52	0.181818181818	On July 1, 2013, Walt Disney Company announced the extension of his CEO contract to June 30, 2016.
+R   25	38	0.114754098361	Robert Iger Walt Disney's official website
