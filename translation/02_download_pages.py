@@ -4,7 +4,6 @@ import wikipedia as wiki
 import time
 import pickle
 
-langlst = ['de','ja','ru','zh','fr']
 
 f = file(catname+'.txt')
 namelist = [ l.strip() for l in f]
@@ -34,6 +33,7 @@ try:
                     pg = wiki.page(link['*'])
                     if type(pg) is list: continue
                     corpus[name][link['lang']] = pg.content.encode('utf-8')
+                    #corpus[name][link['lang']] = pg.summary.encode('utf-8')
         except:
             continue
 except IOError:

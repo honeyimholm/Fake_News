@@ -7,6 +7,16 @@ from myconfig import *
 
 
 corpus = pickle.load(open(catname+'.pkl','rb'))
+corpus.pop('Angel of Mercy')
+corpus.pop('Mary, mother of James')
+corpus.pop('Jaimoe')
+corpus.pop('Jo Kwon')
+corpus.pop('Mirza Ghulam Ahmad')
+corpus.pop('Ming Dao')
+corpus.pop('Balaam')
+corpus.pop('Jon Anderson')
+corpus.pop('Muhammad')
+corpus.pop('Hagar')
 namelist = corpus.keys()
 
 if os.path.isfile('translated_'+catname+'.pkl'):
