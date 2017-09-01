@@ -89,6 +89,25 @@ def get_random_userid():
         pass
     return uid
 
+def get_all_usercontribs(user):
+    uclimit = 500
+    contribs = []
+    uccontinue = None
+    while True:
+        query = '/w/api.php?action=query&list=usercontribs&format=json&ucuser='+user+'&uclimit='+str(uclimit)+'&ucprop=ids|title|timestamp|sizediff|comment|size|tags'
+        if uccontinue is not None: query+='&uccontinue='+uccontinue
+        url = base+query
+        try:
+            response = urllib.urlopen(url)
+            contributs = json.loads(response.read())
+            contribs+=contributs['query']['usercontribs']
+            if 'continue' not in contributs.keys(): break
+            uccontinue = contributs['continue']['uccontinue']
+        except urllib2.HTTPError:
+            break
+    return contribs
+
+
 def get_user_contribs(user, ucsize=50):
     uclimit = 50
     lasttime = None
