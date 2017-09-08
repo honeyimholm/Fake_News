@@ -372,5 +372,20 @@ def parse_wiki_content(text):
         paragraph_dict[''.join(topic_stack)] = '\n'.join(sentlst)
     return paragraph_dict
 
+wiki_markup = re.compile(r"""\[\[(File|Category):[\s\S]+\]\]|
+    \[\[[^|^\]]+\||
+    \[\[|
+    \]\]|
+    \'{2,5}|
+    (<s>|<!--)[\s\S]+(</s>|-->)|
+    {{[\s\S\n]+?}}|
+    <ref>[\s\S]+</ref>|
+    ={1,6}""", re.VERBOSE)
+
+
+def de_wiki(s):
+    r = wiki_markup.sub('', s)
+    return r
+
 if __name__=='__main__':
     
