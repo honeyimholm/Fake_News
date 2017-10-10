@@ -4,11 +4,12 @@ import urllib
 import json
 import time
 import numpy as np
-import re
 from collections import defaultdict
-
 from bs4 import BeautifulSoup
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
+import gensim
+from sklearn.cluster import KMeans
+import time
 
 sia = SIA()
 base = 'https://en.wikipedia.org/'
@@ -90,25 +91,6 @@ def get_random_userid():
     except urllib2.HTTPError:
         pass
     return uid
-
-def get_all_usercontribs(user):
-    uclimit = 500
-    contribs = []
-    uccontinue = None
-    while True:
-        query = '/w/api.php?action=query&list=usercontribs&format=json&ucuser='+user+'&uclimit='+str(uclimit)+'&ucprop=ids|title|timestamp|sizediff|comment|size|tags'
-        if uccontinue is not None: query+='&uccontinue='+uccontinue
-        url = base+query
-        try:
-            response = urllib.urlopen(url)
-            contributs = json.loads(response.read())
-            contribs+=contributs['query']['usercontribs']
-            if 'continue' not in contributs.keys(): break
-            uccontinue = contributs['continue']['uccontinue']
-        except urllib2.HTTPError:
-            break
-    return contribs
-
 
 def get_user_contribs(user, ucsize=50):
     uclimit = 50
@@ -374,20 +356,29 @@ def parse_wiki_content(text):
         paragraph_dict[''.join(topic_stack)] = '\n'.join(sentlst)
     return paragraph_dict
 
-wiki_markup = re.compile(r"""\[\[(File|Category):[\s\S]+\]\]|
-    \[\[[^|^\]]+\||
-    \[\[|
-    \]\]|
-    \'{2,5}|
-    (<s>|<!--)[\s\S]+(</s>|-->)|
-    {{[\s\S\n]+?}}|
-    <ref>[\s\S]+</ref>|
-    ={1,6}""", re.VERBOSE)
-
-
-def de_wiki(s):
-    r = wiki_markup.sub('', s)
-    return r
-
 if __name__=='__main__':
-    pass
+    #BRIEF: get admin and make sure they have more than 1000 contributions
+    contribs = []
+    admins_list = []
+    with open('parsed_admin_list_english.txt') as f:
+        admins_list = f.readlines()
+
+    #admins_list = open("parsed_admin_list_english.txt","r")
+    #while len(contribs)<1000:
+    admin_dict = {}
+    for admin in admins_list:
+    #user_id =admins_list.readline()
+        user_id = admin
+        print "Checking: " + user_id
+        contribs = get_user_contribs(user_id, 1000)
+            #user_id = get_random_userid()
+        #filter for additions of at least 1 sentence
+        #print user_id + "has more than 1000 contributions"
+        user_articles = []
+        for c in contribs:
+            if(c["title"].find("User")==-1):
+                user_articles.append(to_utf8(c["title"]))
+        admin_dict[admin] = user_articles
+        #remove this to process ALL admins in admin list
+        break
+    print admin_dict
