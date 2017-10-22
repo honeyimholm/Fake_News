@@ -1,0 +1,122 @@
+# coding=utf8
+import xml.etree.ElementTree as etree
+import time
+import os
+import re
+import json
+from codecs import open
+
+DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
+SOURCE_FILE = os.path.join(DATA_FOLDER, 'enwiki-20170820-pages-articles.xml')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, 'test_links.txt')
+INDEX_FILE = os.path.join(DATA_FOLDER, 'test_index.json')
+FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, 'final_index.json')
+REDIRECT_FILE = os.path.join(DATA_FOLDER, 'test_redirects.json')
+DISAMBIGUATION_FILE = os.path.join(DATA_FOLDER, 'disambiguations.json')
+
+DISAMBIGUATION_NAMES = set(json.load(open(DISAMBIGUATION_FILE, 'r', encoding='utf8'), encoding='utf8'))
+LINK_PATTERN = re.compile("\[\[(.+?)\]\]")
+REF_PATTERN = re.compile("<ref>.*</ref>")
+
+
+def strip_tag_name(t):
+    t = t.split('}')[1]
+    return t
+
+
+def article_generator(file):
+
+    redirect = False
+    not_article = False
+    yielded = 0
+
+    generator = etree.iterparse(file, events=('start', 'end'))
+    _, root = generator.next()
+
+    for event, elem in generator:
+        xml_tag = strip_tag_name(elem.tag)
+
+        if event == 'start':
+            if xml_tag == 'page':
+                title = None
+                article_id = None
+                text = None
+                revision = False
+                redirect = False
+                not_article = False
+            elif xml_tag == 'revision':
+                revision = True
+
+        else:
+            if not_article:
+                continue
+            if xml_tag == 'title':
+                title = elem.text
+                if ":" in title or "(disambiguation)" in title or title in DISAMBIGUATION_NAMES:
+                    not_article = True
+            if xml_tag == 'id' and not revision:
+                article_id = int(elem.text)
+            if xml_tag == 'redirect':
+                text = elem.attrib['title']
+                redirect = True
+            if not redirect and xml_tag == 'text':
+                text = elem.text
+            if xml_tag == 'ns' and elem.text != '0':
+                not_article = True
+            if xml_tag == 'page':
+                if title and article_id and text:
+                    yield title, article_id, text, redirect
+                    yielded += 1
+                    root.clear()
+
+
+def clean_links(links):
+    return [link.split('|')[0].split('#')[0] for link in links if ":" not in link and len(link.split('|')) < 2 and len(link.split('|')[0].split('#')[0]) > 0]
+
+
+def remove_ref_tags(text):
+    return re.sub(REF_PATTERN, "", text)
+
+
+if __name__ == '__main__':
+    article_number = 0
+    start_time = time.time()
+    article_indexes = {}
+    redirect_references = {}
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
+            if i % 10000 == 0:
+                print i
+                print time.time() - start_time
+            if redirect:
+                redirect_references[title] = text
+            else:
+                f.write(title + "\n")
+                links = re.findall(LINK_PATTERN, text)
+                for link in clean_links(links):
+                    f.write(link + "\n")
+                f.write("\n")
+                article_indexes[title] = article_number
+                redirect_references[title] = title
+                article_number += 1
+    # for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
+    #     if i % 10000 == 0:
+    #         print i
+    #         print time.time() - start_time
+    #     if redirect:
+    #         redirect_references[title] = text
+    #     else:
+    #         links = re.findall(LINK_PATTERN, text)
+    #         article_indexes[title] = article_number
+    #         redirect_references[title] = title
+    #         article_number += 1
+    print "dumping index dict"
+    with open(INDEX_FILE, 'w', encoding='utf-8') as g:
+        json.dump(article_indexes, g, encoding='utf8', indent=2, ensure_ascii=False)
+    print "indexes dumped in " + str(time.time() - start_time)
+    with open(REDIRECT_FILE, 'w', encoding='utf-8') as h:
+        json.dump(redirect_references, h, encoding='utf8', indent=2, ensure_ascii=False)
+    print "redirects dumped in " + str(time.time() - start_time)
+    final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.iteritems()}
+    with open(FINAL_INDEX_FILE, 'w', encoding='utf8') as i:
+        json.dump(final_index, i, encoding='utf8', indent=2, ensure_ascii=False)
