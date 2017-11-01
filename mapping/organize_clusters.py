@@ -5,8 +5,8 @@ from time import time
 
 
 DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
-HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, 'hierarchical_clusters_mt1.json')
-TITLE_TO_PATH_FILE = os.path.join(DATA_FOLDER, 'title_to_path_mt1.json')
+HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, '2110_hierarchical_clusters.json')
+TITLE_TO_PATH_FILE = os.path.join(DATA_FOLDER, '2110_title_to_path.json')
 
 
 def iterate_through_tree(nested_list, path=None):

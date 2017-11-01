@@ -6,12 +6,11 @@ import time
 import numpy as np
 from collections import defaultdict
 from bs4 import BeautifulSoup
-from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 import gensim
 from sklearn.cluster import KMeans
 import time
 
-sia = SIA()
+
 base = 'https://en.wikipedia.org/'
 ### e.x. 2015-08-13T17:53:16Z
 def str2timestamp(s):
@@ -257,44 +256,6 @@ def cat_entropy(cat_dict,catnum):
     S = -np.sum(pdfvec * np.log(pdfvec), axis=0)
     return S
 
-def edit_feature1(contrib):
-    sdiff, size, comment, page_title = int(contrib['sizediff']), int(contrib['size']), contrib['comment'].encode('ascii',errors='ignore').lower(), contrib['title'].encode('ascii',errors='ignore').lower()
-    feat = np.zeros((11,))
-    if (float(sdiff)/(size+1))>0.33: feat[0] = 1  ### start from scratch
-    if sdiff<-500: feat[1] = 1
-    if abs(sdiff)<50: feat[2] = 1
-    if '[[category' in comment: feat[3] = 1
-    if '[[template' in comment: feat[4] = 1
-    if len(comment)==0: feat[5] = 1
-    if 'revert' in comment or 'undid' in comment: feat[6] = 1
-    if 'user talk' in page_title: feat[7] = 1
-    if 'sandbox' in page_title: feat[8] = 1
-    if 'talk:' in page_title: feat[9] = 1
-
-    revid, parentid = contrib['revid'], contrib['parentid']
-    feat[10] = revision_sentiment(revid,parentid)
-
-    return feat
-
-def revision_sentiment(revid,parentid):
-    difftext = get_diff(parentid,revid)
-    if difftext is None: return 0.0
-    soup = BeautifulSoup(difftext,'html.parser')
-    inslst = soup.find_all('ins')
-    dellst = soup.find_all('del')
-    totall = 0
-    sscore = float(0)
-    for ins,dell in zip(inslst,dellst):
-        added_text = ins.get_text()
-        for c in added_text:
-            if c in '=_</\\': continue
-        ss = sia.polarity_scores(added_text)
-        l = len(added_text.split())
-        totall+=l
-        sscore+=ss['compound']*l
-    if totall==0: return 0.0
-    return sscore/totall
-
 def user_feature1(edit_featmat):
     return edit_featmat.mean(axis=0)
     
@@ -381,4 +342,4 @@ if __name__=='__main__':
         admin_dict[admin] = user_articles
         #remove this to process ALL admins in admin list
         break
-    print admin_dict
+    json.dump(admin_dict, open('admin_dict.json', 'r'), indent=2, encoding='utf8', ensure_ascii=False)
