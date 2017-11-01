@@ -7,9 +7,9 @@ from string import capwords
 import numpy as np
 
 DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
-SOURCE_FILE = os.path.join(DATA_FOLDER, 'test_links.txt')
-INDEX_FILE = os.path.join(DATA_FOLDER, 'final_index.json')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, 'indexed_links.json')
+SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
+INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
 
 if __name__ == '__main__':
     start = time()

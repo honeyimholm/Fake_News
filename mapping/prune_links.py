@@ -6,12 +6,12 @@ from codecs import open
 
 
 DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
-SOURCE_FILE = os.path.join(DATA_FOLDER, 'indexed_links.json')
-INDEX_FILE = os.path.join(DATA_FOLDER, 'test_index.json')
-REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, 'reverse_index.json')
-REINDEX_FILE = os.path.join(DATA_FOLDER, 'reindex.json')
-REVERSE_REINDEX_FILE = os.path.join(DATA_FOLDER, 'reverse_reindex.json')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, 'reindexed_pruned_links.json')
+SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
+INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
+REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_index.json')
+REINDEX_FILE = os.path.join(DATA_FOLDER, '2110_reindex.json')
+REVERSE_REINDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_reindex.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_reindexed_pruned_links.json')
 
 
 if __name__ == '__main__':

@@ -7,16 +7,19 @@ import json
 from codecs import open
 
 DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
-SOURCE_FILE = os.path.join(DATA_FOLDER, 'enwiki-20170820-pages-articles.xml')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, 'test_links.txt')
-INDEX_FILE = os.path.join(DATA_FOLDER, 'test_index.json')
-FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, 'final_index.json')
-REDIRECT_FILE = os.path.join(DATA_FOLDER, 'test_redirects.json')
-DISAMBIGUATION_FILE = os.path.join(DATA_FOLDER, 'disambiguations.json')
+RAW_FOLDER = '/home/teven/fake_news/Wikidumps/raw/'
+SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20170820-pages-articles.xml')
+DISAMBIGUATION_FILE = os.path.join(RAW_FOLDER, 'disambiguations.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
+INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
+FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_final_index.json')
+REDIRECT_FILE = os.path.join(DATA_FOLDER, '2110_redirects.json')
 
 DISAMBIGUATION_NAMES = set(json.load(open(DISAMBIGUATION_FILE, 'r', encoding='utf8'), encoding='utf8'))
 LINK_PATTERN = re.compile("\[\[(.+?)\]\]")
 REF_PATTERN = re.compile("<ref>.*</ref>")
+PRUNED_KEYS = ['Category:', 'File:', 'Template:', 'Portal:', 'Draft:', 'MediaWiki:', 'List of', 'Wikipedia:', 'TimedText:',
+               'Help:', 'Book:', 'Module:', 'Topic:']
 
 
 def strip_tag_name(t):
@@ -52,7 +55,7 @@ def article_generator(file):
                 continue
             if xml_tag == 'title':
                 title = elem.text
-                if ":" in title or "(disambiguation)" in title or title in DISAMBIGUATION_NAMES:
+                if is_to_prune(title) or "(disambiguation)" in title or title in DISAMBIGUATION_NAMES:
                     not_article = True
             if xml_tag == 'id' and not revision:
                 article_id = int(elem.text)
@@ -78,11 +81,17 @@ def remove_ref_tags(text):
     return re.sub(REF_PATTERN, "", text)
 
 
+def is_to_prune(title):
+    return any([title.startswith(key) for key in PRUNED_KEYS])
+
+
 if __name__ == '__main__':
     article_number = 0
     start_time = time.time()
     article_indexes = {}
     redirect_references = {}
+    for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
+        pass
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
             if i % 10000 == 0:
