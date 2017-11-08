@@ -6,7 +6,7 @@ from codecs import open
 from string import capwords
 import numpy as np
 
-DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
+from settings import DATA_FOLDER
 SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
 INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')

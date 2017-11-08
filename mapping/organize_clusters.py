@@ -4,7 +4,7 @@ from codecs import open
 from time import time
 
 
-DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
+from settings import DATA_FOLDER
 HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, '2110_hierarchical_clusters.json')
 TITLE_TO_PATH_FILE = os.path.join(DATA_FOLDER, '2110_title_to_path.json')
 

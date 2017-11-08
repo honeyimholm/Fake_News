@@ -1,0 +1,1 @@
+DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'

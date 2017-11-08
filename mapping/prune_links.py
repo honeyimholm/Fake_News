@@ -5,7 +5,7 @@ from time import time
 from codecs import open
 
 
-DATA_FOLDER = '/home/teven/fake_news/Wikidumps/'
+from settings import DATA_FOLDER
 SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
 INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
 REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_index.json')
