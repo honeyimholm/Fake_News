@@ -8,10 +8,11 @@ from codecs import open
 import scipy.sparse as sp
 import numpy as np
 
-from group_controversy import controversy_value
-
+from mapping.group_controversy import controversy_value
 
 from settings import DATA_FOLDER
+
+
 RAW_FOLDER = '/home/teven/fake_news/Wikidumps/raw/'
 REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_index.json')
 TALK_DATA_FILE = os.path.join(DATA_FOLDER, '2110_talk_data.json')

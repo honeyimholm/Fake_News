@@ -11,6 +11,8 @@ import scipy.sparse as sp
 import networkx as nx
 
 from settings import DATA_FOLDER
+
+
 INDEXED_LINKS_FILE = os.path.join(DATA_FOLDER, '2110_reindexed_pruned_links.json')
 REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_reindex.json')
 HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, '2110_hierarchical_clusters.json')

@@ -45,5 +45,3 @@ if __name__ == '__main__':
     plt.axis('off')
     plt.savefig('output.png')
     plt.show()
-
-

@@ -7,6 +7,8 @@ from time import time
 from bs4 import BeautifulSoup
 
 from settings import DATA_FOLDER
+
+
 OUTPUT_FILE = os.path.join(DATA_FOLDER, 'disambiguations.json')
 
 

@@ -69,7 +69,7 @@ def main():
             page = wikipedia.page(title) 
             print page.title
             p = page.content
-            p= filter(lambda x: x in printable, p)
+            p = filter(lambda x: x in printable, p)
             sent_tokenize_list = sent_tokenize(p)
             print sent_tokenize_list
         except:
@@ -131,4 +131,3 @@ main()
 
 #TODO
 #implement category line counting 
-    
