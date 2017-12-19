@@ -4,7 +4,7 @@ import json
 from codecs import open
 from time import time
 
-from infomap import infomap
+from mapping.infomap import infomap
 
 from settings import DATA_FOLDER
 
