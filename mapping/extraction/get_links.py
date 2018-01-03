@@ -7,12 +7,15 @@ import json
 from codecs import open
 
 from settings import DATA_FOLDER
-SOURCE_FILE = os.path.join(DATA_FOLDER, 'enwiki-20170820-pages-articles.xml')
+
+
+RAW_FOLDER = os.path.join(DATA_FOLDER, 'raw/')
+SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20170820-pages-articles.xml')
+DISAMBIGUATION_FILE = os.path.join(RAW_FOLDER, 'disambiguations.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
 INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
 FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_final_index.json')
 REDIRECT_FILE = os.path.join(DATA_FOLDER, '2110_redirects.json')
-DISAMBIGUATION_FILE = os.path.join(DATA_FOLDER, 'disambiguations.json')
 
 DISAMBIGUATION_NAMES = set(json.load(open(DISAMBIGUATION_FILE, 'r', encoding='utf8'), encoding='utf8'))
 LINK_PATTERN = re.compile("\[\[(.+?)\]\]")
@@ -89,42 +92,29 @@ if __name__ == '__main__':
     start_time = time.time()
     article_indexes = {}
     redirect_references = {}
-    for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
-        pass
-    # with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-    #     for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
-    #         if i % 10000 == 0:
-    #             print i
-    #             print time.time() - start_time
-    #         if redirect:
-    #             redirect_references[title] = text
-    #         else:
-    #             f.write(title + "\n")
-    #             links = re.findall(LINK_PATTERN, text)
-    #             for link in clean_links(links):
-    #                 f.write(link + "\n")
-    #             f.write("\n")
-    #             article_indexes[title] = article_number
-    #             redirect_references[title] = title
-    #             article_number += 1
-    # # for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
-    # #     if i % 10000 == 0:
-    # #         print i
-    # #         print time.time() - start_time
-    # #     if redirect:
-    # #         redirect_references[title] = text
-    # #     else:
-    # #         links = re.findall(LINK_PATTERN, text)
-    # #         article_indexes[title] = article_number
-    # #         redirect_references[title] = title
-    # #         article_number += 1
-    # print "dumping index dict"
-    # with open(INDEX_FILE, 'w', encoding='utf-8') as g:
-    #     json.dump(article_indexes, g, encoding='utf8', indent=2, ensure_ascii=False)
-    # print "indexes dumped in " + str(time.time() - start_time)
-    # with open(REDIRECT_FILE, 'w', encoding='utf-8') as h:
-    #     json.dump(redirect_references, h, encoding='utf8', indent=2, ensure_ascii=False)
-    # print "redirects dumped in " + str(time.time() - start_time)
-    # final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.iteritems()}
-    # with open(FINAL_INDEX_FILE, 'w', encoding='utf8') as i:
-    #     json.dump(final_index, i, encoding='utf8', indent=2, ensure_ascii=False)
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
+            if i % 10000 == 0:
+                print i
+                print time.time() - start_time
+            if redirect:
+                redirect_references[title] = text
+            else:
+                f.write(title + "\n")
+                links = re.findall(LINK_PATTERN, text)
+                for link in clean_links(links):
+                    f.write(link + "\n")
+                f.write("\n")
+                article_indexes[title] = article_number
+                redirect_references[title] = title
+                article_number += 1
+    print "dumping index dict"
+    with open(INDEX_FILE, 'w', encoding='utf-8') as g:
+        json.dump(article_indexes, g, encoding='utf8', indent=2, ensure_ascii=False)
+    print "indexes dumped in " + str(time.time() - start_time)
+    with open(REDIRECT_FILE, 'w', encoding='utf-8') as h:
+        json.dump(redirect_references, h, encoding='utf8', indent=2, ensure_ascii=False)
+    print "redirects dumped in " + str(time.time() - start_time)
+    final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.iteritems()}
+    with open(FINAL_INDEX_FILE, 'w', encoding='utf8') as i:
+        json.dump(final_index, i, encoding='utf8', indent=2, ensure_ascii=False)

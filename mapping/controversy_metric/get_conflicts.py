@@ -7,7 +7,7 @@ import os
 import scipy.sparse as sp
 from codecs import open
 
-from mapping.networks.group_controversy import controversy_value
+from mapping.extraction.group_controversy import controversy_value
 from settings import DATA_FOLDER
 
 RAW_FOLDER = '/home/teven/fake_news/Wikidumps/raw/'
