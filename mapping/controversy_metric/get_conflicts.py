@@ -29,27 +29,27 @@ def save_sparse_csr(filename, data, indices, indptr, shape):
 if __name__ == '__main__':
 
     talk_data = json.load(open(TALK_DATA_FILE, 'r', encoding='utf-8'), encoding='utf8')
-    controversial_articles = {article: controversy_value(*values) for article, values in talk_data.iteritems() if controversy_value(*values) > 0}
+    controversial_articles = {article: controversy_value(*values) for article, values in talk_data.items() if controversy_value(*values) > 0}
 
     with open(CONTROVERSY_SCORES, 'w', encoding='utf-8') as g:
         json.dump(controversial_articles, g, encoding='utf8', indent=2, ensure_ascii=False)
 
-    controversial_articles = {int(k): v for k, v in controversial_articles.iteritems() if v > 0.15}
-    print str(len(controversial_articles)) + " controversial articles"
+    controversial_articles = {int(k): v for k, v in controversial_articles.items() if v > 0.15}
+    print(str(len(controversial_articles)) + " controversial articles")
 
-    print "talk data loaded"
+    print("talk data loaded")
 
-    links = {int(k): v for k, v in json.load(open(LINKS_FILE, 'r', encoding='utf-8'), encoding='utf8').iteritems()}
-    controversial_links = {article: citations for article, citations in links.iteritems() if int(article) in controversial_articles}
+    links = {int(k): v for k, v in json.load(open(LINKS_FILE, 'r', encoding='utf-8'), encoding='utf8').items()}
+    controversial_links = {article: citations for article, citations in links.items() if int(article) in controversial_articles}
 
-    print "links extracted"
+    print("links extracted")
 
     reverse_index = json.load(open(REVERSE_INDEX_FILE, 'r', encoding='utf-8'), encoding='utf8')
 
-    reverse_controversial_index = {article: reverse_index[article] for article in controversial_articles.keys() if article in reverse_index}
+    reverse_controversial_index = {article: reverse_index[article] for article in list(controversial_articles.keys()) if article in reverse_index}
     matrix_index = []
 
-    print "indexes built"
+    print("indexes built")
 
     indptr = [0]
     data = []
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     current_pointer = 0
 
-    for i, (article, citations) in enumerate(controversial_links.iteritems()):
+    for i, (article, citations) in enumerate(controversial_links.items()):
         if len(citations) > 0:
             matrix_index.append(article)
             current_pointer += len(citations) + 1
@@ -70,13 +70,13 @@ if __name__ == '__main__':
     with open(MATRIX_INDEX, 'w', encoding='utf-8') as g:
         json.dump(matrix_index, g, encoding='utf8', indent=2, ensure_ascii=False)
 
-    print "matrix arrays created"
+    print("matrix arrays created")
 
-    print len(data)
+    print(len(data))
     controversy_matrix = sp.csc_matrix((data, indices, indptr))
-    print controversy_matrix.shape
+    print(controversy_matrix.shape)
 
-    print "matrix created"
+    print("matrix created")
 
     controversial_adjacency = controversy_matrix.transpose() * controversy_matrix
     shape = controversial_adjacency.shape
@@ -84,8 +84,8 @@ if __name__ == '__main__':
     indices = controversial_adjacency.indices
     indptr = controversial_adjacency.indptr
 
-    print "adjacency matrix created"
+    print("adjacency matrix created")
 
     save_sparse_csr(ADJACENCY_MATRIX, data, indices, indptr, shape)
 
-    print "adjacency matrix dumped"
+    print("adjacency matrix dumped")

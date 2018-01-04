@@ -39,8 +39,8 @@ if __name__ == '__main__':
         disambiguations, next_page_url = handle_page(next_page_url)
         disambiguation_titles.extend(disambiguations)
         if counter % 10 == 0:
-            print counter
-            print time() - start_time
+            print(counter)
+            print(time() - start_time)
         counter += 1
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(disambiguation_titles, f, encoding='utf8', ensure_ascii=False, indent=2)

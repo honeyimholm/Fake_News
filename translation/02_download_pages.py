@@ -14,7 +14,7 @@ corpus ={}
 try:
     for name in namelist:
         try:
-            if name in corpus.keys(): continue
+            if name in list(corpus.keys()): continue
             corpus[name] = {}
             wiki.set_lang('en')
             #pg = wiki.page(name)
@@ -26,7 +26,7 @@ try:
             en_title = pg.url.split('/')[-1]
             en_title = en_title.replace(' ','%20')
             mllst = get_language_links(en_title)
-            print en_title, len(mllst)
+            print(en_title, len(mllst))
             for link in mllst:
                 if link['lang'] in langlst: 
                     wiki.set_lang(link['lang'])
@@ -37,6 +37,6 @@ try:
         except:
             continue
 except IOError:
-    print corpus
+    print(corpus)
     pickle.dump(corpus, open(catname+'.pkl','wb'))
 pickle.dump(corpus, open(catname+'.pkl','wb'))

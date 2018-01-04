@@ -17,7 +17,7 @@ corpus.pop('Balaam')
 corpus.pop('Jon Anderson')
 corpus.pop('Muhammad')
 corpus.pop('Hagar')
-namelist = corpus.keys()
+namelist = list(corpus.keys())
 
 if os.path.isfile('translated_'+catname+'.pkl'):
     f = open('translated_'+catname+'.pkl','rb')
@@ -28,20 +28,20 @@ else:
 
 i = 0
 for name in namelist:
-    if name in corpus2.keys(): continue
-    print '===============',name,'==============='
+    if name in list(corpus2.keys()): continue
+    print('===============',name,'===============')
     d = {}
     d['en'] = corpus[name]['en']
-    for lang in corpus[name].keys():
+    for lang in list(corpus[name].keys()):
         if lang=='en': continue
         tsentlst = []
-        print '==========',lang,'=========='
+        print('==========',lang,'==========')
         sentlist = corpus[name][lang].split('\n')
         cmd1 = ('./trans -brief -s '+lang+' -t en ').encode('utf-8')
         for sent in sentlist:
             cmd = cmd1+'\"'+sent.replace('\"','\'')+'\"'
             tsent = subprocess.check_output(cmd, shell=True)
-            print tsent
+            print(tsent)
             #print 'origin:', sent
             #print 'translated:', tsent
             tsentlst.append(tsent)

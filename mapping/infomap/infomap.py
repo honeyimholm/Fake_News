@@ -24,7 +24,7 @@ elif _swig_python_version_info >= (2, 6, 0):
         try:
             fp, pathname, description = imp.find_module('_infomap', [dirname(__file__)])
         except ImportError:
-            import _infomap
+            from . import _infomap
             return _infomap
         try:
             _mod = imp.load_module('_infomap', fp, pathname, description)
@@ -35,7 +35,7 @@ elif _swig_python_version_info >= (2, 6, 0):
     _infomap = swig_import_helper()
     del swig_import_helper
 else:
-    import _infomap
+    from . import _infomap
 del _swig_python_version_info
 
 try:
@@ -43,7 +43,7 @@ try:
 except NameError:
     pass  # Python < 2.2 doesn't have 'property'.
 
-import __builtin__
+import builtins
 
 def _swig_setattr_nondynamic(self, class_type, name, value, static=1):
     if (name == "thisown"):
@@ -80,14 +80,14 @@ def _swig_getattr(self, class_type, name):
 def _swig_repr(self):
     try:
         strthis = "proxy of " + self.this.__repr__()
-    except __builtin__.Exception:
+    except builtins.Exception:
         strthis = ""
     return "<%s.%s; %s >" % (self.__class__.__module__, self.__class__.__name__, strthis,)
 
 try:
     _object = object
     _newclass = 1
-except __builtin__.Exception:
+except builtins.Exception:
     class _object:
         pass
     _newclass = 0
@@ -122,7 +122,7 @@ class SwigPyIterator(_object):
     def copy(self):
         return _infomap.SwigPyIterator_copy(self)
 
-    def next(self):
+    def __next__(self):
         return _infomap.SwigPyIterator_next(self)
 
     def __next__(self):
@@ -168,7 +168,7 @@ class StringVector(_object):
     def __iter__(self):
         return self.iterator()
 
-    def __nonzero__(self):
+    def __bool__(self):
         return _infomap.StringVector___nonzero__(self)
 
     def __bool__(self):
@@ -238,7 +238,7 @@ class StringVector(_object):
         this = _infomap.new_StringVector(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def push_back(self, x):
@@ -281,7 +281,7 @@ class StateNodeMap(_object):
     def __iter__(self):
         return self.iterator()
 
-    def __nonzero__(self):
+    def __bool__(self):
         return _infomap.StateNodeMap___nonzero__(self)
 
     def __bool__(self):
@@ -335,7 +335,7 @@ class StateNodeMap(_object):
         this = _infomap.new_StateNodeMap(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def empty(self):
@@ -396,7 +396,7 @@ class UIntDeque(_object):
     def __iter__(self):
         return self.iterator()
 
-    def __nonzero__(self):
+    def __bool__(self):
         return _infomap.UIntDeque___nonzero__(self)
 
     def __bool__(self):
@@ -466,7 +466,7 @@ class UIntDeque(_object):
         this = _infomap.new_UIntDeque(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def push_back(self, x):
@@ -516,7 +516,7 @@ class Infomap(_object):
         this = _infomap.new_Infomap(flags)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def readInputData(self, filename):
@@ -555,7 +555,7 @@ class MemInfomap(_object):
         this = _infomap.new_MemInfomap(flags)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def readInputData(self, filename):
@@ -603,7 +603,7 @@ class ElapsedTime(_object):
         this = _infomap.new_ElapsedTime(elapsedTime)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_ElapsedTime
     __del__ = lambda self: None
@@ -633,7 +633,7 @@ class Date(_object):
         this = _infomap.new_Date(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_Date
     __del__ = lambda self: None
@@ -654,7 +654,7 @@ class Config(_object):
         this = _infomap.new_Config(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def setOptimizationLevel(self, level):
@@ -1030,7 +1030,7 @@ class Network(_object):
         this = _infomap.new_Network(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_Network
     __del__ = lambda self: None
@@ -1143,7 +1143,7 @@ class Bigram(_object):
         this = _infomap.new_Bigram(first, second)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def __lt__(self, other):
@@ -1176,7 +1176,7 @@ class BipartiteLink(_object):
         this = _infomap.new_BipartiteLink(featureNode, node, swapOrder)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def __lt__(self, other):
@@ -1201,7 +1201,7 @@ class Weight(_object):
         this = _infomap.new_Weight(weight)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def __iadd__(self, w):
@@ -1222,7 +1222,7 @@ class Triple(_object):
         this = _infomap.new_Triple(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_Triple
     __del__ = lambda self: None
@@ -1258,7 +1258,7 @@ class Link(_object):
         this = _infomap.new_Link(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_setmethods__["n1"] = _infomap.Link_n1_set
     __swig_getmethods__["n1"] = _infomap.Link_n1_get
@@ -1288,7 +1288,7 @@ class ComplementaryData(_object):
         this = _infomap.new_ComplementaryData(n1, n2, weight)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def addExactMatch(self, missing, weight):
@@ -1347,7 +1347,7 @@ class MemNetwork(Network):
         this = _infomap.new_MemNetwork(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_MemNetwork
     __del__ = lambda self: None
@@ -1420,7 +1420,7 @@ class MultiplexNetwork(MemNetwork):
         this = _infomap.new_MultiplexNetwork(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_MultiplexNetwork
     __del__ = lambda self: None
@@ -1453,7 +1453,7 @@ class NodeData(_object):
         this = _infomap.new_NodeData(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_setmethods__["flow"] = _infomap.NodeData_flow_set
     __swig_getmethods__["flow"] = _infomap.NodeData_flow_get
@@ -1503,7 +1503,7 @@ class ChildEdge(_object):
         this = _infomap.new_ChildEdge(source, target, flow)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_setmethods__["source"] = _infomap.ChildEdge_source_set
     __swig_getmethods__["source"] = _infomap.ChildEdge_source_get
@@ -1536,7 +1536,7 @@ class EdgeComp(_object):
         this = _infomap.new_EdgeComp()
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_EdgeComp
     __del__ = lambda self: None
@@ -1554,7 +1554,7 @@ class SNode(_object):
         this = _infomap.new_SNode(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_SNode
     __del__ = lambda self: None
@@ -1673,7 +1673,7 @@ class LeafIterator(_object):
         this = _infomap.new_LeafIterator(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def base(self):
@@ -1707,7 +1707,7 @@ class LeafIterator(_object):
     	self._firstYielded = False
     	return self
 
-    def next(self):
+    def __next__(self):
     	if not self._firstYielded:
     		self._firstYielded = True
     	else:
@@ -1719,7 +1719,7 @@ class LeafIterator(_object):
     	return self
 
     def __next__(self):
-    	return self.next()
+    	return next(self)
 
     __swig_destroy__ = _infomap.delete_LeafIterator
     __del__ = lambda self: None
@@ -1834,7 +1834,7 @@ class TreeIterator(_object):
         this = _infomap.new_TreeIterator(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def base(self):
@@ -1871,7 +1871,7 @@ class TreeIterator(_object):
     	self._firstYielded = False
     	return self
 
-    def next(self):
+    def __next__(self):
     	if not self._firstYielded:
     		self._firstYielded = True
     	else:
@@ -1883,7 +1883,7 @@ class TreeIterator(_object):
     	return self
 
     def __next__(self):
-    	return self.next()
+    	return next(self)
 
     __swig_destroy__ = _infomap.delete_TreeIterator
     __del__ = lambda self: None
@@ -1998,7 +1998,7 @@ class ChildIterator(_object):
         this = _infomap.new_ChildIterator(*args)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
 
     def base(self):
@@ -2141,7 +2141,7 @@ class HierarchicalNetwork(_object):
         this = _infomap.new_HierarchicalNetwork(conf)
         try:
             self.this.append(this)
-        except __builtin__.Exception:
+        except builtins.Exception:
             self.this = this
     __swig_destroy__ = _infomap.delete_HierarchicalNetwork
     __del__ = lambda self: None

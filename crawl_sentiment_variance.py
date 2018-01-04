@@ -33,22 +33,22 @@ def main():
     if not os.path.exists(directory):
         os.makedirs(directory)
     #set up the category page
-    c_file = open("C:\Users\sahol\Desktop\Fake News Deep Learning\Wikipedia_title_dataset-master\category_list_en.txt","w")
+    c_file = open("C:\\Users\sahol\Desktop\Fake News Deep Learning\Wikipedia_title_dataset-master\category_list_en.txt","w")
     c_file.write(cat)
     c_file.close()
     #Crawling wiki
-    print "Crawling..." + lang + " wikipedia"
+    print("Crawling..." + lang + " wikipedia")
     os.system('python WikiCrawler.py -l ' + lang + ' -n ' + str(num))
 
     #raw dictionary to txt file
-    print "Raw to Format..."
+    print("Raw to Format...")
     os.system('python raw2format.py -l ' + lang)
 
     #take category title outputs and extract raw text
     dir = os.path.dirname(os.path.abspath(__file__))
-    print "dir: " + dir
+    print("dir: " + dir)
     filename = dir + r'\acl2017_data\en.txt'
-    print filename
+    print(filename)
     f = open(filename,"r")
     content = f.readlines()
     if(len(content)<100):
@@ -67,11 +67,11 @@ def main():
     for idx, title in enumerate(content):
         try:
             page = wikipedia.page(title) 
-            print page.title
+            print(page.title)
             p = page.content
-            p = filter(lambda x: x in printable, p)
+            p = [x for x in p if x in printable]
             sent_tokenize_list = sent_tokenize(p)
-            print sent_tokenize_list
+            print(sent_tokenize_list)
         except:
             #most errors taken care of by printable filter
             #sometimes get page not found error
@@ -99,7 +99,7 @@ def main():
             score_mean = score_mean + ss["pos"] - ss["neg"]  
             sentences = sentences+1
             for k in sorted(ss):
-                print '{0}: {1}, '.format(k, ss[k])
+                print('{0}: {1}, '.format(k, ss[k]))
         score_mean = score_mean/(2*sentences)
         for sentence in sent_tokenize_list:
             ss = sid.polarity_scores(sentence)
@@ -110,7 +110,7 @@ def main():
         #graphing variance for now 
         score = score_variance
         #unicode title characters will cause errors in plotting
-        formatted_title = smart_truncate(filter(lambda x: x in printable, title))
+        formatted_title = smart_truncate([x for x in title if x in printable])
         article_score_dict[formatted_title] = round(score,3)
         if(idx==150):
             break
@@ -118,12 +118,12 @@ def main():
 
     #this section takes the article score dictionary and plots it
     #   from lowest to highest bias
-    sorted_values = article_score_dict.values()
+    sorted_values = list(article_score_dict.values())
     sorted_values.sort()
     shortened_titles = list(article_score_dict.keys())
-    print sorted_values 
-    plt.bar(range(len(article_score_dict)), sorted_values, align="center")
-    plt.xticks(range(len(article_score_dict)), list(article_score_dict.keys()), rotation="vertical")
+    print(sorted_values) 
+    plt.bar(list(range(len(article_score_dict))), sorted_values, align="center")
+    plt.xticks(list(range(len(article_score_dict))), list(article_score_dict.keys()), rotation="vertical")
     plt.tight_layout()
     plt.show()
     #plt.savefig(category)

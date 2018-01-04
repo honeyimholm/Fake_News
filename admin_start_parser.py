@@ -20,10 +20,10 @@ with open("admin_start_list_raw.txt") as f:
         	continue
     	name_date = re.findall(capture_name_date_regex, line)
     	if(name_date):
-			print "parsing: " + line
+			print("parsing: " + line)
 			#default tuple is immutable
 			name_date = list(name_date[0])
-			print name_date
+			print(name_date)
 			if(name_date[1]==''):
 				#without year data point is useless
 				continue
@@ -33,8 +33,8 @@ with open("admin_start_list_raw.txt") as f:
 			if(name_date[3]==''):
 				name_date[3] = '1'
 			admin_contrib_dict[name_date[0]] = [i for i in name_date[1:]]
-print admin_contrib_dict
-print "pickling!"
+print(admin_contrib_dict)
+print("pickling!")
 pickle_out = open(OUTPUT_FILE,"wb")
 pickle.dump(admin_contrib_dict, pickle_out)
 pickle_out.close()

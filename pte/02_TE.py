@@ -39,17 +39,17 @@ lablst = []
 for article in article_list:
     fn1 = 'annot/'+l1+'_'+l2+'_'+article+'.txt'
     sentlst = [l.split('\t')[-1] for l in file(fn1)]
-    sentlst = [unicode(s, 'utf-8') for s in sentlst]
+    sentlst = [str(s, 'utf-8') for s in sentlst]
     ref_fdict_lst = extract_all_feature(sentlst)
 
-    ref_para = u' '.join(sentlst)
+    ref_para = ' '.join(sentlst)
     para_feat = extract_all_feature([ref_para])[0]
 
     fn2 = 'annot/'+l2+'_'+l1+'_'+article+'.txt'
     for l in file(fn2):
         if l[0]=='T' or l[0]=='F':
             ngram_score = float(l.split('\t')[2])
-            sfeat = extract_all_feature([unicode(l,'utf-8')])[0]
+            sfeat = extract_all_feature([str(l,'utf-8')])[0]
             ### extract other features
             ## sent + para
             ent_feat_lst = ent_feats(sfeat, para_feat)
@@ -61,14 +61,14 @@ for article in article_list:
             featlst.append([ngram_score,nonstop_unigram]+ent_feat_lst)
 
     sentlst = [l.split('\t')[-1] for l in file(fn2)]
-    sentlst = [unicode(s, 'utf-8') for s in sentlst]
+    sentlst = [str(s, 'utf-8') for s in sentlst]
     ref_fdict_lst = extract_all_feature(sentlst)
-    ref_para = u' '.join(sentlst)
+    ref_para = ' '.join(sentlst)
     para_feat = extract_all_feature([ref_para])[0]
     for l in file(fn1):
         if l[0]=='T' or l[0]=='F':
             ngram_score = float(l.split('\t')[2])
-            sfeat = extract_all_feature([unicode(l,'utf-8')])[0]
+            sfeat = extract_all_feature([str(l,'utf-8')])[0]
             ### extract other features
             ## sent + para
             ent_feat_lst = ent_feats(sfeat, para_feat)
@@ -88,7 +88,7 @@ for Xtrain, ytrain, Xtest, ytest in KFold(X,y):
     ypred = svc.predict(Xtest)
     ypred_total+=ypred.tolist()
     ytest_total+=ytest.tolist()
-print accuracy_score(ytest_total, ypred_total)
+print(accuracy_score(ytest_total, ypred_total))
 """
 predlst = []
 thres = 0.28

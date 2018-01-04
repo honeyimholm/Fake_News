@@ -58,7 +58,7 @@ def article_generator(file):
 
     with open(file) as xml_file:
         generator = etree.iterparse(xml_file, events=('start', 'end'))
-        _, root = generator.next()
+        _, root = next(generator)
 
         for event, elem in generator:
             xml_tag = strip_tag_name(elem.tag)
@@ -193,22 +193,22 @@ def handle_article(article):
 if __name__ == '__main__':
     pool = Pool(4)
     problems = 0
-    talk_data = {article_id: [] for article_id in article_index.values()}
+    talk_data = {article_id: [] for article_id in list(article_index.values())}
 
-    print 'starting'
+    print('starting')
     start_time = time.time()
     for i, (article_id, length, flag_count, date, max_answer, users, tags) in enumerate(pool.imap_unordered(handle_article, article_generator(SOURCE_FILE))):
         if i == 0:
-            print i
-            print time.time() - start_time
+            print(i)
+            print(time.time() - start_time)
         if article_id is None:
             problems += 1
             continue
         else:
             talk_data[article_id].append((length, flag_count, date, max_answer, users, tags))
         if i % 10000 == 0:
-            print str(i - problems) + "/" + str(i)
-            print str(time.time() - start_time) + "s"
+            print(str(i - problems) + "/" + str(i))
+            print(str(time.time() - start_time) + "s")
     talk_data = {article_id: (
                               sum([data[0] for data in values]),
                               sum([data[1] for data in values]),
@@ -217,6 +217,6 @@ if __name__ == '__main__':
                               len(set.union(*[data[4] for data in values])),
                               list(set.union(*[data[5] for data in values]))
                              )
-                 for article_id, values in talk_data.iteritems() if len(values) > 0}
+                 for article_id, values in talk_data.items() if len(values) > 0}
     with open(TALK_DATA_FILE, 'w', encoding='utf8') as i:
         json.dump(talk_data, i, encoding='utf8', indent=2, ensure_ascii=False)

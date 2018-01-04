@@ -36,7 +36,7 @@ def article_generator(file):
     yielded = 0
 
     generator = etree.iterparse(file, events=('start', 'end'))
-    _, root = generator.next()
+    _, root = next(generator)
 
     for event, elem in generator:
         xml_tag = strip_tag_name(elem.tag)
@@ -95,8 +95,8 @@ if __name__ == '__main__':
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
             if i % 10000 == 0:
-                print i
-                print time.time() - start_time
+                print(i)
+                print(time.time() - start_time)
             if redirect:
                 redirect_references[title] = text
             else:
@@ -108,13 +108,13 @@ if __name__ == '__main__':
                 article_indexes[title] = article_number
                 redirect_references[title] = title
                 article_number += 1
-    print "dumping index dict"
+    print("dumping index dict")
     with open(INDEX_FILE, 'w', encoding='utf-8') as g:
         json.dump(article_indexes, g, encoding='utf8', indent=2, ensure_ascii=False)
-    print "indexes dumped in " + str(time.time() - start_time)
+    print("indexes dumped in " + str(time.time() - start_time))
     with open(REDIRECT_FILE, 'w', encoding='utf-8') as h:
         json.dump(redirect_references, h, encoding='utf8', indent=2, ensure_ascii=False)
-    print "redirects dumped in " + str(time.time() - start_time)
-    final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.iteritems()}
+    print("redirects dumped in " + str(time.time() - start_time))
+    final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.items()}
     with open(FINAL_INDEX_FILE, 'w', encoding='utf8') as i:
         json.dump(final_index, i, encoding='utf8', indent=2, ensure_ascii=False)

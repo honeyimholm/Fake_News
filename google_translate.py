@@ -13,6 +13,6 @@ f = open('translate.js', 'w')
 f.write(translate_script)
 response = muterun_js('translate.js')
 if response.exitcode == 0:
-  print str(response.stdout)
+  print(str(response.stdout))
 else:
   sys.stderr.write(response.stderr)

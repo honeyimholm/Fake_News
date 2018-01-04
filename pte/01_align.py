@@ -4,7 +4,7 @@ import pickle
 import nltk
 from scipy.optimize import linear_sum_assignment
 
-def str2utf8(s): return unicode(s,'utf-8')
+def str2utf8(s): return str(s,'utf-8')
 
 def extract_summary(sentlst):
     lst = []
@@ -21,18 +21,18 @@ f.close()
 
 #testlst = ['Akio Toyoda']
 #testlst = ['Xi Jinping']
-for key in corpus.keys():
+for key in list(corpus.keys()):
 #for key in testlst:
     page_dict = corpus[key]
-    en_page = unicode(page_dict['en'],'utf-8')
-    key = unicode(key,'utf-8')
-    print key
+    en_page = str(page_dict['en'],'utf-8')
+    key = str(key,'utf-8')
+    print(key)
     en_sent_lst = sent_tokenize(en_page)
     en_sent_lst, en_title_lst = title_struct_feat(en_sent_lst) ##'==' removed!
     #en_sent_lst = extract_summary(en_sent_lst)
 
-    if 'zh' not in page_dict.keys(): continue
-    zh_page = unicode(page_dict['zh'],'utf-8')
+    if 'zh' not in list(page_dict.keys()): continue
+    zh_page = str(page_dict['zh'],'utf-8')
     zh_sent_lst = sent_tokenize(zh_page)
     zh_sent_lst, zh_title_lst = title_struct_feat(zh_sent_lst) ##'==' removed!
     #zh_sent_lst = extract_summary(zh_sent_lst)
@@ -58,4 +58,4 @@ for key in corpus.keys():
         f.write(str(mat[:,i].max())+'\t')
         f.write(sent.encode('utf8')+'\n')
     f.close()
-    print len(zh_sent_lst), len(en_sent_lst)
+    print(len(zh_sent_lst), len(en_sent_lst))

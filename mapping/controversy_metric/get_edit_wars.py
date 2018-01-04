@@ -4,7 +4,7 @@ import json
 from codecs import open
 import re
 from time import time
-import urllib
+import urllib.request, urllib.parse, urllib.error
 from collections import Counter
 
 from bs4 import BeautifulSoup
@@ -37,7 +37,7 @@ def extract_article(regex_result):
     else:
         text = regex_result.group()
     initial_pos = text.find("|")
-    text = urllib.unquote(text[initial_pos + 1:-2])
+    text = urllib.parse.unquote(text[initial_pos + 1:-2])
     if '_' in text:
         text = text.replace("_", " ")
     return text
@@ -56,7 +56,7 @@ if __name__ == '__main__':
         url = base_url + str(archive_number) + "&action=edit"
         articles = [article for article in handle_url(url) if article in article_names]
         wars.extend(articles)
-        print archive_number
+        print(archive_number)
 
     wars = dict(Counter(wars))
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:

@@ -32,7 +32,7 @@ def save_sparse_csr(filename, matrix):
 
 
 def time_step(current_time):
-    print str(time() - current_time) + 's elapsed'
+    print(str(time() - current_time) + 's elapsed')
     return time()
 
 
@@ -62,13 +62,13 @@ if __name__ == '__main__':
     else:
         title_to_path = json.load(open(TITLE_TO_PATH_FILE, 'r'))
         g = nx.Graph()
-        g.add_nodes_from([(index, {'title': title, 'cluster': title_to_path[title][0]}) for index, title in reverse_index.iteritems() if title])
-        print 'nodes added in ' + str(time() - t_start)
-        for article, citations in indexed_citations.iteritems():
+        g.add_nodes_from([(index, {'title': title, 'cluster': title_to_path[title][0]}) for index, title in reverse_index.items() if title])
+        print('nodes added in ' + str(time() - t_start))
+        for article, citations in indexed_citations.items():
             g.add_edges_from([(article, citation) for citation in citations])
-        print 'network built in ' + str(time() - t_start)
+        print('network built in ' + str(time() - t_start))
         nx.write_edgelist(g, GRAPH_FILE)
-        print 'network dumped in ' + str(time() - t_start)
+        print('network dumped in ' + str(time() - t_start))
 
     sparse_adjacency = nx.to_scipy_sparse_matrix(g)
     save_sparse_csr(ADJACENCY_MATRIX, sparse_adjacency)

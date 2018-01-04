@@ -6,7 +6,7 @@ from time import time
 
 from bs4 import BeautifulSoup
 
-from get_talks import clean_talk_title
+from .get_talks import clean_talk_title
 from settings import DATA_FOLDER
 
 

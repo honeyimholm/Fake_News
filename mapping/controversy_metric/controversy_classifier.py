@@ -41,7 +41,7 @@ if __name__ == '__main__':
     bad_predictions = clf.predict(bad_test)
     good_probas = [data[1] for data in clf.predict_proba(good_test)]
     good_predictions = clf.predict(good_test)
-    print str(sum(bad_probas)) + "/" + str(len(bad_test))
-    print str(sum(good_probas)) + "/" + str(len(good_test))
-    print str(sum(bad_predictions)) + "/" + str(len(bad_test))
-    print str(sum(good_predictions)) + "/" + str(len(good_test))
+    print(str(sum(bad_probas)) + "/" + str(len(bad_test)))
+    print(str(sum(good_probas)) + "/" + str(len(good_test)))
+    print(str(sum(bad_predictions)) + "/" + str(len(bad_test)))
+    print(str(sum(good_predictions)) + "/" + str(len(good_test)))

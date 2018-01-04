@@ -1,6 +1,6 @@
 import sys
-import urllib2
-import urllib
+import urllib.request, urllib.error, urllib.parse
+import urllib.request, urllib.parse, urllib.error
 import json
 import time
 import numpy as np
@@ -41,25 +41,25 @@ def get_revisions_from_pgid(pgid, rvsize=50):
         if lasttime is not None: query+='&rvstart='+lasttime
         url = base+query
         try:
-            response = urllib.urlopen(url)
+            response = urllib.request.urlopen(url)
             pages = json.loads(response.read())
             revisions+=pages['query']['pages'][pgid]['revisions'][1:]
             lasttime = pages['query']['pages'][pgid]['revisions'][-1]['timestamp']
-        except urllib2.HTTPError: # 404, 500, etc..
+        except urllib.error.HTTPError: # 404, 500, etc..
             pass
     return revisions
 
 def get_user_dict(revisions):
     userdict = defaultdict(int)
     for i,r in enumerate(revisions):
-        if 'user' not in r.keys(): continue
+        if 'user' not in list(r.keys()): continue
         userdict[r['user']]+=1
     return userdict
 
 def get_revert_num(revisions):
     num = 0
     for i,r in enumerate(revisions):
-        if 'comment' not in r.keys(): continue
+        if 'comment' not in list(r.keys()): continue
         comment = r['comment'].lower()
         if 'revert' in comment or 'undid' in comment: num+=1
     return num
@@ -84,10 +84,10 @@ def get_random_userid():
     query = '/w/api.php?action=query&&format=json&prop=revisions&pageids='+str(randomid)+'&rvprop=user'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         response = json.loads(response.read())
         uid = response['query']['pages'][str(randomid)]['revisions'][0]['user']
-    except urllib2.HTTPError:
+    except urllib.error.HTTPError:
         pass
     return uid
 
@@ -100,12 +100,12 @@ def get_all_usercontribs(user):
         if uccontinue is not None: query+='&uccontinue='+uccontinue
         url = base+query
         try:
-            response = urllib.urlopen(url)
+            response = urllib.request.urlopen(url)
             contributs = json.loads(response.read())
             contribs+=contributs['query']['usercontribs']
-            if 'continue' not in contributs.keys(): break
+            if 'continue' not in list(contributs.keys()): break
             uccontinue = contributs['continue']['uccontinue']
-        except urllib2.HTTPError:
+        except urllib.error.HTTPError:
             break
     return contribs
 
@@ -119,13 +119,13 @@ def get_user_contribs(user, ucsize=50):
         if lasttime is not None: query+='&rcstart='+lasttime
         url = base+query
         try:
-            response = urllib.urlopen(url)
+            response = urllib.request.urlopen(url)
             contributs = json.loads(response.read())
             contribs_batch = contributs['query']['usercontribs']
             if i!=0: contribs_batch = contribs_batch[1:]
             contribs+=contributs['query']['usercontribs']
             lasttime = contributs['query']['usercontribs'][-1]['timestamp']
-        except urllib2.HTTPError:
+        except urllib.error.HTTPError:
             pass
     return contribs
 
@@ -136,21 +136,21 @@ def suggest_cat(title):
     query = '/w/api.php?action=query&format=json&titles='+title+'&prop=categories'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         response = json.loads(response.read())
-        lst = [cat['title'] for cat in response['query']['pages'].values()[0]['categories']]
-    except urllib2.HTTPError, AttributeError:
-        print 'error'
+        lst = [cat['title'] for cat in list(response['query']['pages'].values())[0]['categories']]
+    except urllib.error.HTTPError as AttributeError:
+        print('error')
         return []
         pass
     except KeyError:
-        print 'key error'
+        print('key error')
         return []
         pass
     return lst
     
 def accumulate_cat(cat_dict, catlst):
-    if len(cat_dict.keys())==0: cat_dict = defaultdict(int)
+    if len(list(cat_dict.keys()))==0: cat_dict = defaultdict(int)
     for cat in catlst:
         cat_dict[cat]+=1
     return cat_dict
@@ -159,15 +159,15 @@ def get_random_pageid():
     query = '/w/api.php?action=query&format=json&list=random&rnlimit=2'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         response = json.loads(response.read())
         randomid = response['query']['random'][0]['id']
-    except urllib2.HTTPError:
+    except urllib.error.HTTPError:
         pass
     return randomid
 
 def to_utf8(text):
-    if isinstance(text, unicode):
+    if isinstance(text, str):
         # unicode to utf-8
         return text.encode('utf-8')
     else:
@@ -180,10 +180,10 @@ def crawl_cat(category):
             '&cmtype=page%7Csubcat&cmlimit=max'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         response = json.loads(response.read())
         subcatlst = [ obj['title'] for obj in response['query']['categorymembers'] if obj['type']=='subcat']
-    except urllib2.HTTPError:
+    except urllib.error.HTTPError:
         pass
     return subcatlst
 
@@ -239,11 +239,11 @@ def get_diff(parentid,revid):
     url = base+query
     difftext = None
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         pages = json.loads(response.read())
         difftext = pages['compare']['*']
 
-    except urllib2.HTTPError: # 404, 500, etc..
+    except urllib.error.HTTPError: # 404, 500, etc..
         pass
     except KeyError:
         pass
@@ -255,10 +255,10 @@ def get_user_props(userid):
     query = '/w/api.php?action=query&list=users&ususers='+userid+'&usprop=blockinfo|groups|editcount|registration|emailable|gender&format=json'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         userinfos = json.loads(response.read())
         userinfos = userinfos['query']['users'][0]
-    except urllib2.HTTPError: # 404, 500, etc..
+    except urllib.error.HTTPError: # 404, 500, etc..
         pass
     return userinfos
 
@@ -325,10 +325,10 @@ def get_blocked_list(num=100,starttime=None):
         query+='&bkstart='+str(starttime)
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         blockinfos = json.loads(response.read())
         blockinfos = blockinfos['query']['blocks']
-    except urllib2.HTTPError: # 404, 500, etc..
+    except urllib.error.HTTPError: # 404, 500, etc..
         pass
 
     return blockinfos
@@ -340,11 +340,11 @@ def get_language_links(pgname):
     query = '/w/api.php?action=query&titles='+pgname+'&prop=langlinks&lllimit=500&format=json'
     url = base+query
     try:
-        response = urllib.urlopen(url)
+        response = urllib.request.urlopen(url)
         langinfo = json.loads(response.read())
-        mllist = langinfo['query']['pages'].values()[0]['langlinks']
+        mllist = list(langinfo['query']['pages'].values())[0]['langlinks']
 
-    except urllib2.HTTPError: # 404, 500, etc..
+    except urllib.error.HTTPError: # 404, 500, etc..
         pass
     return mllist
 
@@ -367,7 +367,7 @@ def parse_wiki_content(text):
                 depth_stack.pop(-1)
             topic_stack.append(line.strip())
             depth_stack.append(depth)
-            print topic_stack
+            print(topic_stack)
         else:
             sentlst.append(line)
     if len(sentlst)>0:

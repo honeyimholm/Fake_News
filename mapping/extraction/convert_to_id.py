@@ -30,8 +30,8 @@ if __name__ == '__main__':
                 article_links = []
                 article_number += 1
                 if article_number % 10000 == 0:
-                    print str(article_number) + " articles"
-                    print str(time() - start) + "s"
+                    print(str(article_number) + " articles")
+                    print(str(time() - start) + "s")
                 continue
             if bad_article:
                 continue
@@ -42,17 +42,17 @@ if __name__ == '__main__':
             if main_id is None:
                 if new_id is None:
                     bad_article = True
-                    print title
-                    print capwords(title)
-                    print new_id
-                    print
+                    print(title)
+                    print(capwords(title))
+                    print(new_id)
+                    print()
                 else:
                     main_id = new_id
             else:
                 if new_id:
                     article_links.append(new_id)
-    print "average number of links : " + str(np.mean([len(links) for links in links_dict.values()]))
-    print "total number of indices : " + str(len({item for sublist in links_dict.values() for item in sublist} | set(links_dict.keys())))
-    print "max index: " + str(max({item for sublist in links_dict.values() for item in sublist} | set(links_dict.keys())))
+    print("average number of links : " + str(np.mean([len(links) for links in list(links_dict.values())])))
+    print("total number of indices : " + str(len({item for sublist in list(links_dict.values()) for item in sublist} | set(links_dict.keys()))))
+    print("max index: " + str(max({item for sublist in list(links_dict.values()) for item in sublist} | set(links_dict.keys()))))
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as g:
         json.dump(links_dict, g, encoding='utf8', indent=2, ensure_ascii=False)

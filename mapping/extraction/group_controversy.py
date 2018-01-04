@@ -40,5 +40,5 @@ def grouped_controversy(article_list, links, controversy_values):
 
 
 if __name__ == '__main__':
-    controversy_values = {int(k): v for k, v in json.load(open(CONTROVERSY_SCORES, 'r', encoding='utf-8'), encoding='utf8').iteritems()}
+    controversy_values = {int(k): v for k, v in json.load(open(CONTROVERSY_SCORES, 'r', encoding='utf-8'), encoding='utf8').items()}
     links = json.load(open(LINKS_FILE, 'r', encoding='utf-8'), encoding='utf8')

@@ -25,8 +25,8 @@ def load_sparse_csr(filename):
 if __name__ == '__main__':
     adjacency_matrix = load_sparse_csr(ADJACENCY_MATRIX)
     adjacency_matrix.eliminate_zeros()
-    print adjacency_matrix.shape
-    print len(adjacency_matrix.data)
+    print(adjacency_matrix.shape)
+    print(len(adjacency_matrix.data))
     g = nx.from_scipy_sparse_matrix(adjacency_matrix)
     index = json.load(open(MATRIX_INDEX, 'r', encoding='utf-8'), encoding='utf8')
     clustering = community.best_partition(g)

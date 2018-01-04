@@ -43,7 +43,7 @@ def title_struct_feat(sentlst):
             topic_stack.append(sent.replace('=',''))
             depth_stack.append(depth)
         else:
-            title_feat_lst.append(unicode.join(u' ',topic_stack))
+            title_feat_lst.append(str.join(' ',topic_stack))
             pure_sentlst.append(sent)
     return pure_sentlst, title_feat_lst
 
@@ -173,7 +173,7 @@ def find_align_block(score_matrix):
             if maxscore<score: 
                 maxscore = score
                 r =(i,j)
-    print r
+    print(r)
     return r
 
 def list_remove_dup(lst):
@@ -198,9 +198,9 @@ def para_match_print(para_pos_lst,sentlst1,titlelst1,sentlst2,titlelst2,f):
     for pos in para_pos_lst:
         ori_start, ori_end, align_start, align_end = pos
         out = '[origin]: \n=='+titlelst1[ori_start]+'==\n'
-        out+=unicode.join(u'\n', sentlst1[ori_start:ori_end+1])
+        out+=str.join('\n', sentlst1[ori_start:ori_end+1])
         if align_start>0:
-            out+='\n[align]: \n'+unicode.join(u'\n', sentlst2[align_start:align_end+1])+'\n\n'
+            out+='\n[align]: \n'+str.join('\n', sentlst2[align_start:align_end+1])+'\n\n'
         else:
             out+='\n[not aligned]\n\n'
         f.write(out.encode('utf8'))
