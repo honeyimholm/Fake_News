@@ -1,0 +1,24 @@
+{
+  "name": "Top Level",
+  "parent": "null",
+  "children": [
+    {
+      "name": "Level 2: A",
+      "parent": "Top Level",
+      "children": [
+        {
+          "name": "This is a teeeeeeeeeeeeest",
+          "parent": "Level 2: A"
+        },
+        {
+          "name": "Waka Flaka Flaaaame",
+          "parent": "Level 2: A"
+        }
+      ]
+    },
+    {
+      "name": "Level 2: B",
+      "parent": "Top Level"
+    }
+  ]
+}
