@@ -6,8 +6,10 @@ import re
 import json
 import string
 import numpy as np
+import wikichatter as wc
 from multiprocessing import Pool
 from codecs import open
+import requests
 
 from settings import DATA_FOLDER
 
@@ -158,65 +160,85 @@ def analyze_text(text):
     return length, flag_count, max_answer, users, tags
 
 
+def toxicity_score(comment):
+    url = 'https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=AIzaSyBVt6m1dQlYSuTLtRmKwU3onqjT7FaGeVs'
+    payload_dict = {
+      'comment': { 'text': comment },
+      'requestedAttributes': {'TOXICITY': {}}
+    }
+    payload = json.dumps(payload_dict, ensure_ascii=False).encode("utf8")
+    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
+    r = requests.post(url, data=payload, headers=headers)
+    response_dict = json.loads(r.text)
+    try:
+        return response_dict["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
+    except KeyError:
+        print(payload)
+
+
+def toxicity_number(section):
+    toxicity = 0
+    if "author" in section and "time_stamp" in section and "text_blocks" in section:
+        text_blocks = [text[1:-1] for text in section['text_blocks']]
+        pruned_blocks = [comment_text for comment_text in text_blocks
+                         if len(comment_text) > 20 and (comment_text[0] != '"' or comment_text[-1] != '"')]
+        if any([toxicity_score(comment) > 0.2 for comment in pruned_blocks]):
+            toxicity = 1
+    for reply in section['comments']:
+        toxicity += toxicity_number(reply)
+    return toxicity
+
+
+# def toxicity_explorer(parsed_text):
+#     if "author" in parsed_text and "time_stamp" in parsed_text and "text_blocks" in parsed_text:
+#         text_blocks = [text[1:-1] for text in parsed_text['text_blocks']]
+#         pruned_blocks = [comment_text for comment_text in text_blocks
+#                          if len(comment_text) > 20 and (comment_text[0] != '"' or comment_text[-1] != '"')]
+#         toxicity = sum(toxicity_score(comment_text for comment_text in pruned_blocks))
+#         length = sum(len([comment_text for comment_text in pruned_blocks]))
+#         if length > 0:
+#             yield toxicity
+#     for comment in parsed_text:
+#         for toxicity in toxicity_explorer(comment['comments']):
+#             yield toxicity
+
+
 def handle_article(article):
 
     title, text = article[0], article[1]
 
     article_id = article_index.get(title, None)
-    dates = [int(match[-4:]) for match in re.findall(DATE_PATTERN, text)]
-    dates.append(9999)
-    date = min(dates)
 
-    flag_count = 0
-    length = len(text)
+    try:
+        parsed_text = (wc.parse(text))
+    except wc.error.MalformedWikitextError:
+        print(text)
+        print(title)
+        raise wc.error.MalformedWikitextError
+    if len(parsed_text) > 1:
+        print(parsed_text)
+        raise NameError('several sections in dict')
+    else:
+        parsed_text = parsed_text['sections']
 
-    colons = re.findall(COLON_REGEX, text)
-    colons.append(":")
-    max_answer = max([len(colon_sequence) for colon_sequence in colons])
-
-    users = re.findall(USER_REGEX, text)
-    users = {clean_user_tag(user) for user in users if clean_user_tag(user) is not None}
-
-    tags = set()
-    for tag in PAGE_TAGS:
-        if tag in text:
-            tags.add(tag)
-    for i in range(length):
-        if text[i:i+3].upper() == 'WP:':
-            if any([text[i+3:i+3+j].upper() in ACRONYM_FLAGS for j in FLAG_LENGTHS]):
-                flag_count += 1
-
-
-    return article_id, length, flag_count, date, max_answer, users, tags
+    return article_id, sum(toxicity_number(section) for section in parsed_text)
 
 
 if __name__ == '__main__':
     pool = Pool(4)
     problems = 0
-    talk_data = {article_id: [] for article_id in list(article_index.values())}
+    talk_data = {article_id: 0 for article_id in list(article_index.values())}
 
     print('starting')
     start_time = time.time()
-    for i, (article_id, length, flag_count, date, max_answer, users, tags) in enumerate(pool.imap_unordered(handle_article, article_generator(SOURCE_FILE))):
-        if i == 0:
-            print(i)
-            print(time.time() - start_time)
+    for i, (article_id, toxicity_number) in enumerate(pool.imap_unordered(handle_article, article_generator(SOURCE_FILE))):
         if article_id is None:
             problems += 1
             continue
         else:
-            talk_data[article_id].append((length, flag_count, date, max_answer, users, tags))
+            talk_data[article_id] += toxicity_number
         if i % 10000 == 0:
             print(str(i - problems) + "/" + str(i))
             print(str(time.time() - start_time) + "s")
-    talk_data = {article_id: (
-                              sum([data[0] for data in values]),
-                              sum([data[1] for data in values]),
-                              min([data[2] for data in values]),
-                              max([data[3] for data in values]),
-                              len(set.union(*[data[4] for data in values])),
-                              list(set.union(*[data[5] for data in values]))
-                             )
-                 for article_id, values in talk_data.items() if len(values) > 0}
     with open(TALK_DATA_FILE, 'w', encoding='utf8') as i:
         json.dump(talk_data, i, encoding='utf8', indent=2, ensure_ascii=False)

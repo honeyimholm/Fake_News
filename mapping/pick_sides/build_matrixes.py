@@ -1,7 +1,7 @@
 import os
 import json
 import scipy.sparse as sp
-import numpy as npm
+import numpy as np
 
 from settings import DATA_FOLDER
 
