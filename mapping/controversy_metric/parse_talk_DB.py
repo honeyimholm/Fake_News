@@ -1,56 +1,70 @@
-#TODO: this code copies from Fake_News\perspective\api_wrapper.py
+# coding=utf8
 import requests, json
+import os
 import sqlite3
+from multiprocessing import Pool
+from time import time
 
-DATABASE_PATH = "D:\\WikiDB.db"
+from settings import DATA_FOLDER
+from api_wrapper import toxicity_score
+
+DATABASE_PATH = os.path.join(DATA_FOLDER, 'WikiDB.db')
 TOXICITY_THRESHOLD = .25
-
-def toxicity_score(comment):
-    url = 'https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=AIzaSyBVt6m1dQlYSuTLtRmKwU3onqjT7FaGeVs'
-    #need to clean for JSON
-    comment = ''.join([i if ord(i) < 128 else ' ' for word in comment for i in word])
-    payload_dict = {
-      'comment': { 'text': comment},
-      'requestedAttributes': {'TOXICITY': {}}
-    }
-    payload = json.dumps(payload_dict, ensure_ascii=False).encode("utf8")
-    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-    r = requests.post(url, data=payload, headers=headers)
-    response_dict = json.loads(r.text)
-    print(response_dict)
-    try:
-    	return response_dict["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
-    except KeyError:
-    	#print(payload)
-    	print(comment[0].encode('utf8'))
-    	return
 toxicity_dict = {}
-#connect to db
 conn = sqlite3.connect(DATABASE_PATH)
 cur = conn.cursor()
-#retrieve list of all articles
-article_iterator = cur.execute("SELECT * from article")
-#for every article retrieve all comments 
-#TODO: replace with 
-comment = "2013\xe2\x80\x8e?"
-print(toxicity_score(comment))
-for article_row in article_iterator:
-	print(article_row[0])
-	#TODO
-	comments = cur.execute("SELECT text from comment WHERE article_id="+str(article_row[0]))
-	toxic_comments = 0
-	#add comment to dict if toxicity score above threshold
-	for comment in comments:
-		print(comment[0].encode("utf8"))
-		if(toxicity_score(comment)>TOXICITY_THRESHOLD):
-			toxic_comments = toxic_comments+1
-	print(toxic_comments)
-	break
-	if(toxic_comments>0):
-		toxicity_dict[article] = toxic_comments
-#export
-with open('toxicity_dict.json', 'w') as fp:
-    json.dump(toxicity_dict, fp)
 
-#DEMO
-#comment = "What kind of idiot name is foo — ?"
+
+def handle_comment(comment_row):
+    print(comment_row)
+    article_id, text = comment_row[0], comment_row[1]
+    start_tox = time()
+    if toxicity_score(text) > TOXICITY_THRESHOLD:
+        toxic = True
+    else:
+        toxic = False
+    print(time() - start_tox)
+    return article_id, toxic
+
+
+def article_iterator_wrapper(comment_iterator):
+    comments = []
+    current_id = 1
+    for article_id, comment in comment_iterator:
+        if article_id == current_id:
+            comments.append(comment)
+        else:
+            yield current_id, comments
+            current_id = article_id
+            comments = [comment]
+
+
+if __name__ == '__main__':
+    comment_iterator = cur.execute("SELECT article_id, text from comment ORDER BY article_id")
+    start_time = time()
+    total_comments = 0
+    max_comments = 0
+    # pool = Pool(1)
+
+    for i, (current_id, comments) in enumerate(article_iterator_wrapper(comment_iterator)):
+        total_comments += len(comments)
+        if len(comments) > max_comments:
+            max_comments = len(comments)
+        if i % 1000 == 0:
+            print(time()-start_time)
+            print(i)
+
+
+    print(total_comments)
+    print(total_comments / float(i))
+
+    # for i, (article_id, toxic) in enumerate(map(handle_comment, comment_iterator)):
+    #     print(i)
+    #     if i % 100 == 0:
+    #         print(i)
+    #         print(time() - start_time)
+    #         if i > 0:
+    #             break
+
+    # with open('toxicity_dict.json', 'w') as fp:
+    #     json.dump(toxicity_dict, fp)

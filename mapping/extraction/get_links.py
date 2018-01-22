@@ -7,9 +7,8 @@ import json
 from codecs import open
 
 from settings import DATA_FOLDER
+from settings import RAW_FOLDER
 
-
-RAW_FOLDER = os.path.join(DATA_FOLDER, 'raw/')
 SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20170820-pages-articles.xml')
 DISAMBIGUATION_FILE = os.path.join(RAW_FOLDER, 'disambiguations.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
