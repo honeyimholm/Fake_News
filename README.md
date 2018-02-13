@@ -1,6 +1,6 @@
 # Abstract
 
-With common sources of knowledge being labeled “Fake News” what online medium can we trust? By researching various feature vectors of wikipedia edits such as sentiment analysis and category distribution and by applying other NLP approaches we hope to identify biasing by individual editors and across languages. Paper of ﬁndings to be submitted to NAACL
+With common sources of knowledge being labeled “Fake News” what online medium can we trust? By researching various feature vectors of wikipedia edits such as sentiment analysis and category distribution and by applying other NLP approaches we hope to identify biasing by individual editors and across languages. Paper of ﬁndings to be submitted to ACL.
 
 # Approach
 
