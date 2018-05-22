@@ -4,6 +4,8 @@ import os
 import sqlite3
 from multiprocessing import Pool
 from time import time
+import numpy as np
+import matplotlib.pyplot as plt
 
 from settings import DATA_FOLDER
 from api_wrapper import toxicity_score
@@ -44,19 +46,23 @@ if __name__ == '__main__':
     start_time = time()
     total_comments = 0
     max_comments = 0
+    comment_distribution = np.zeros(47628)
     # pool = Pool(1)
 
     for i, (current_id, comments) in enumerate(article_iterator_wrapper(comment_iterator)):
-        total_comments += len(comments)
-        if len(comments) > max_comments:
-            max_comments = len(comments)
+        talk_length = len(comments)
+        total_comments += talk_length
+        comment_distribution[talk_length - 1] += 1
+        if talk_length > max_comments:
+            max_comments = talk_length
         if i % 1000 == 0:
             print(time()-start_time)
             print(i)
 
 
-    print(total_comments)
+    print(max_comments)
     print(total_comments / float(i))
+
 
     # for i, (article_id, toxic) in enumerate(map(handle_comment, comment_iterator)):
     #     print(i)

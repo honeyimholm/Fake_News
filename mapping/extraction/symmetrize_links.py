@@ -6,6 +6,7 @@ from codecs import open
 
 
 from settings import DATA_FOLDER
+
 SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_symmetrized_links.json')
 

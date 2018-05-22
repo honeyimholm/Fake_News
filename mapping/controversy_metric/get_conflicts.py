@@ -24,8 +24,6 @@ def save_sparse_csr(filename, data, indices, indptr, shape):
              indptr=indptr, shape=shape)
 
 
-
-
 if __name__ == '__main__':
 
     talk_data = json.load(open(TALK_DATA_FILE, 'r', encoding='utf-8'), encoding='utf8')
