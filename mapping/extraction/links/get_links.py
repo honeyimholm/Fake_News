@@ -9,12 +9,12 @@ from codecs import open
 from settings import DATA_FOLDER
 from settings import RAW_FOLDER
 
-SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20170820-pages-articles.xml')
+SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20180520-pages-articles-multistream.xml')
 DISAMBIGUATION_FILE = os.path.join(RAW_FOLDER, 'disambiguations.json')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
-INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
-FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_final_index.json')
-REDIRECT_FILE = os.path.join(DATA_FOLDER, '2110_redirects.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, 'links.txt')
+INDEX_FILE = os.path.join(DATA_FOLDER, 'index.json')
+FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, 'final_index.json')
+REDIRECT_FILE = os.path.join(DATA_FOLDER, 'redirects.json')
 
 DISAMBIGUATION_NAMES = set(json.load(open(DISAMBIGUATION_FILE, 'r', encoding='utf8'), encoding='utf8'))
 LINK_PATTERN = re.compile("\[\[(.+?)\]\]")

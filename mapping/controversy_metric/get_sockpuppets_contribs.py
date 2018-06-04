@@ -10,12 +10,12 @@ from get_sockpuppets import query
 
 def get_contribs(user_names, contrib_dict):
 
-    for result in query({'list': 'usercontribs', 'ucprop': 'title|sizediff', 'uclimit': 'max', 'ucuser': user_names, 'ucnamespace': '0|1', 'ucshow': '!minor'}):
+    for result in query({'list': 'usercontribs', 'ucprop': 'title|sizediff', 'uclimit': 'max', 'ucuser': user_names, 'ucnamespace': '0|1', 'ucshow': '!minor'}):    
 
         for contrib in result['usercontribs']:
             try:
                 try:
-                    contrib_dict[contrib['user']] += (contrib['title'], contrib.get('sizediff', 0))
+                    contrib_dict[contrib['user']] += [(contrib['title'], contrib.get('sizediff', 0))]
                 except KeyError:
                     contrib_dict[contrib['user']] = [(contrib['title'], contrib.get('sizediff', 0))]
             except KeyError:

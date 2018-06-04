@@ -43,4 +43,4 @@ if __name__ == '__main__':
             print(time() - start_time)
         counter += 1
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(disambiguation_titles, f, encoding='utf8', ensure_ascii=False, indent=2)
+        json.dump(disambiguation_titles, f, ensure_ascii=False, indent=2)

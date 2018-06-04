@@ -1,6 +1,7 @@
 import os
 
 dir = os.path.dirname(__file__)
-DATA_FOLDER = os.path.join(dir, os.path.join('..', 'Wikidumps'))
-RAW_FOLDER = os.path.join(DATA_FOLDER, 'raw')
+LOCAL_DATA_FOLDER = os.path.join(dir, os.path.join('..', 'Wikidumps/2018_processed'))
+DATA_FOLDER = '/media/teven/TOSHIBA EXT/Wikidumps/2018_processed'
+RAW_FOLDER = '/media/teven/TOSHIBA EXT/Wikidumps/raw'
 API_KEY = open(os.path.join(RAW_FOLDER, 'API_KEY.txt')).read()
