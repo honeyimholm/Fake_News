@@ -7,9 +7,9 @@ from string import capwords
 import numpy as np
 
 from settings import DATA_FOLDER
-SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_links.txt')
-INDEX_FILE = os.path.join(DATA_FOLDER, '2110_index.json')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
+SOURCE_FILE = os.path.join(DATA_FOLDER, 'links.txt')
+INDEX_FILE = os.path.join(DATA_FOLDER, 'index.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, 'indexed_links.json')
 
 if __name__ == '__main__':
     start = time()
@@ -55,4 +55,4 @@ if __name__ == '__main__':
     print("total number of indices : " + str(len({item for sublist in list(links_dict.values()) for item in sublist} | set(links_dict.keys()))))
     print("max index: " + str(max({item for sublist in list(links_dict.values()) for item in sublist} | set(links_dict.keys()))))
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as g:
-        json.dump(links_dict, g, encoding='utf8', indent=2, ensure_ascii=False)
+        json.dump(links_dict, g, indent=2, ensure_ascii=False)

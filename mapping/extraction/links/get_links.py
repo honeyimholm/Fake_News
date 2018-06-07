@@ -109,11 +109,11 @@ if __name__ == '__main__':
                 article_number += 1
     print("dumping index dict")
     with open(INDEX_FILE, 'w', encoding='utf-8') as g:
-        json.dump(article_indexes, g, encoding='utf8', indent=2, ensure_ascii=False)
+        json.dump(article_indexes, g, indent=2, ensure_ascii=False)
     print("indexes dumped in " + str(time.time() - start_time))
     with open(REDIRECT_FILE, 'w', encoding='utf-8') as h:
-        json.dump(redirect_references, h, encoding='utf8', indent=2, ensure_ascii=False)
+        json.dump(redirect_references, h, indent=2, ensure_ascii=False)
     print("redirects dumped in " + str(time.time() - start_time))
     final_index = {article: article_indexes.get(redirect, None) for article, redirect in redirect_references.items()}
     with open(FINAL_INDEX_FILE, 'w', encoding='utf8') as i:
-        json.dump(final_index, i, encoding='utf8', indent=2, ensure_ascii=False)
+        json.dump(final_index, i, indent=2, ensure_ascii=False)

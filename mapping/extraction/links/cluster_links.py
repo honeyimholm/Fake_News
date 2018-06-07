@@ -48,7 +48,7 @@ if __name__ == '__main__':
     print('clusters built')
     current_time = time_step(t_start)
 
-    reverse_index = json.load(open(REVERSE_INDEX_FILE, 'r', encoding='utf8'), encoding='utf8')
+    reverse_index = json.load(open(REVERSE_INDEX_FILE, 'r', encoding='utf8'))
     hierarchical_clusters = []
     t0 = time()
     current_upper_cluster = 0

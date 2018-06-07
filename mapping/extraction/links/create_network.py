@@ -53,7 +53,7 @@ def recursive_sort(nested_list):
 
 
 if __name__ == '__main__':
-    reverse_index = json.load(open(REVERSE_INDEX_FILE, 'r', encoding='utf8'), encoding='utf8')
+    reverse_index = json.load(open(REVERSE_INDEX_FILE, 'r', encoding='utf8'))
     indexed_citations = json.load(open(INDEXED_LINKS_FILE, 'r'))
     t_start = time()
 

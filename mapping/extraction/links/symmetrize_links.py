@@ -7,8 +7,8 @@ from codecs import open
 
 from settings import DATA_FOLDER
 
-SOURCE_FILE = os.path.join(DATA_FOLDER, '2110_indexed_links.json')
-OUTPUT_FILE = os.path.join(DATA_FOLDER, '2110_symmetrized_links.json')
+SOURCE_FILE = os.path.join(DATA_FOLDER, 'indexed_links.json')
+OUTPUT_FILE = os.path.join(DATA_FOLDER, 'symmetrized_links.json')
 
 if __name__ == '__main__':
     start_time = time()
@@ -24,4 +24,4 @@ if __name__ == '__main__':
     indexed_links = {k: list(v) for k, v in indexed_links.items()}
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as g:
-        json.dump(indexed_links, g, encoding='utf8', indent=2, ensure_ascii=False)
+        json.dump(indexed_links, g, indent=2, ensure_ascii=False)
