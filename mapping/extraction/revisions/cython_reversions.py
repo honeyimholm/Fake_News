@@ -11,7 +11,7 @@ SOURCE_FILE = os.path.join(LOCAL_DATA_FOLDER, '0520_revisions.txt')
 M_FILE = os.path.join(DATA_FOLDER, '0520_Mscores.txt')
 REDIRECT_FILE = os.path.join(DATA_FOLDER, 'redirects.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, '0520_500_reversions.txt.json')
-M_THRESHOLD = 500   ²A  
+M_THRESHOLD = 500
 
 
 if __name__ == '__main__':
