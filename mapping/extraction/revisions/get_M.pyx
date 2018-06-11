@@ -23,15 +23,14 @@ def get_M(article_revisions):
     for revision in reversed(article_revisions):
 
         try:
-            user_pair = (revision[0], sha1_dict[revision[2]])
-            reversions.append(user_pair)
-            M += min(user_edit_counts[user_pair[0]], user_edit_counts[user_pair[1]])
+            user_pair = (next_user, sha1_dict[revision[2]])
+            if user_pair[0] != user_pair[1]:
+                reversions.append(user_pair)
+                M += min(user_edit_counts[user_pair[0]], user_edit_counts[user_pair[1]])
         except KeyError:
             pass
 
-        sha1_dict[revision[2]] = next_user
+        sha1_dict[revision[2]] = revision[0]
         next_user = revision[0]
 
-    # print(sha1_dict)
-
-    return M, reversions
+    return M, reversions, user_edit_counts

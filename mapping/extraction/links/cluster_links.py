@@ -9,9 +9,9 @@ from mapping.infomap import infomap
 from settings import DATA_FOLDER
 
 
-INDEXED_LINKS_FILE = os.path.join(DATA_FOLDER, '2110_reindexed_pruned_links.json')
-REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, '2110_reverse_reindex.json')
-HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, '2110_hierarchical_clusters.json')
+INDEXED_LINKS_FILE = os.path.join(DATA_FOLDER, 'reindexed_pruned_links.json')
+REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, 'reverse_reindex.json')
+HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, 'hierarchical_clusters.json')
 
 
 def time_step(current_time):
