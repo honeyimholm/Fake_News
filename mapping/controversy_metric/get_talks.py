@@ -11,7 +11,7 @@ from multiprocessing import Pool
 from codecs import open
 import requests
 
-from api_wrapper import toxicity_score
+from toxicity_api_wrapper import toxicity_score
 from settings import DATA_FOLDER
 from settings import RAW_FOLDER
 

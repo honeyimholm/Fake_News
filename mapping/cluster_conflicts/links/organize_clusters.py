@@ -26,5 +26,5 @@ if __name__ == '__main__':
     cluster_sizes = {}
     title_to_path = {}
     for item, path in iterate_through_tree(hierarchical_clusters, None):
-        title_to_path[item] = path
+        title_to_path[item['title']] = path
     json.dump(title_to_path, open(TITLE_TO_PATH_FILE, 'w', encoding='utf8'), ensure_ascii=False, indent=2)

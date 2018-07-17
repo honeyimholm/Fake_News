@@ -4,10 +4,18 @@ import requests
 from time import time, sleep
 import re
 
-from settings import DATA_FOLDER
+from settings import LANGUAGE, RAW_FOLDER
 
 
-def query(request):
+if LANGUAGE == "EN":
+    api_address = 'https://en.wikipedia.org/w/api.php'
+if LANGUAGE == "FR":
+    api_address = 'https://fr.wikipedia.org/w/api.php'
+if LANGUAGE == "DE":
+    api_address = 'https://de.wikipedia.org/w/api.php'
+
+
+def query(request, language_api):
     request['action'] = 'query'
     request['format'] = 'json'
     retries = 0
@@ -19,7 +27,7 @@ def query(request):
         req.update(lastContinue)
         # Call API
         try:
-            result = requests.get('https://en.wikipedia.org/w/api.php', params=req).json()
+            result = requests.get(language_api, params=req).json()
             if 'error' in result:
                 raise requests.HTTPError(result['error'])
             if 'warnings' in result:
@@ -50,7 +58,7 @@ if __name__ == '__main__':
     start_time = time()
 
     for result in query({'list': 'categorymembers', 'cmprop': 'title', 'cmtitle': 'Category:Wikipedia sockpuppets',
-                         'cmtype': 'subcat', 'cmlimit': 'max'}):
+                         'cmtype': 'subcat', 'cmlimit': 'max'}, api_address):
 
         subcategories = [item['title'] for item in result['categorymembers'] if
                          item['title'].startswith('Category:Wikipedia sockpuppets of')]
@@ -66,4 +74,4 @@ if __name__ == '__main__':
 
         print('{} done in {}'.format(len(sockpuppet_dictionary), stop_time - start_time))
 
-    json.dump(sockpuppet_dictionary, open(os.path.join(DATA_FOLDER, 'sockpuppets_1605.json'), 'w'), ensure_ascii=False, indent=2)
+    json.dump(sockpuppet_dictionary, open(os.path.join(RAW_FOLDER, 'sockpuppets_0507.json'), 'w'), ensure_ascii=False, indent=2)

@@ -4,43 +4,35 @@ import json
 from codecs import open
 from time import time
 
-from bs4 import BeautifulSoup
-
-from settings import DATA_FOLDER
-
+from settings import LANGUAGE, DATA_FOLDER
+from mapping.controversy_metric.get_sockpuppets import query
 
 OUTPUT_FILE = os.path.join(DATA_FOLDER, 'disambiguations.json')
 
-
-def is_page_link(tag):
-    return tag.name == 'li' and tag.a
-
-
-def handle_page(url):
-    r = requests.get(url)
-    r.encoding = 'utf8'
-    source = r.text
-    soup = BeautifulSoup(source, 'lxml')
-    disambiguations = [tag.a.string for i, tag in enumerate(soup.find_all(is_page_link, limit=203)) if i > 2]
-    try:
-        next_page_tag = soup.find_all("a", string="next page")[0]
-        next_page_url = 'https://en.wikipedia.org' + next_page_tag['href']
-    except IndexError:
-        next_page_url = None
-    return disambiguations, next_page_url
+if LANGUAGE == "EN":
+    api_address = 'https://en.wikipedia.org/w/api.php'
+    category = 'Category:Wikipedia sockpuppets'
+if LANGUAGE == "FR":
+    api_address = 'https://fr.wikipedia.org/w/api.php'
+    category = 'Catégorie:Homonymie'
+if LANGUAGE == "DE":
+    api_address = 'https://de.wikipedia.org/w/api.php'
+    category = 'Kategorie:Begriffsklärung'
 
 
 if __name__ == '__main__':
+
     start_time = time()
     disambiguation_titles = list()
-    next_page_url = 'https://en.wikipedia.org/w/index.php?title=Category:All_article_disambiguation_pages&pageuntil=1st+New+Brunswick+general+election#mw-pages'
-    counter = 0
-    while next_page_url is not None:
-        disambiguations, next_page_url = handle_page(next_page_url)
-        disambiguation_titles.extend(disambiguations)
-        if counter % 10 == 0:
-            print(counter)
-            print(time() - start_time)
-        counter += 1
+
+    for result in query({'list': 'categorymembers', 'cmprop': 'title', 'cmtitle': category,
+                         'cmtype': 'page', 'cmlimit': 'max'}, api_address):
+
+        print(result)
+
+        for page in result['categorymembers']:
+
+            disambiguation_titles.append(page['title'])
+
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(disambiguation_titles, f, ensure_ascii=False, indent=2)

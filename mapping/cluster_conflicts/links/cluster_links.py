@@ -10,7 +10,7 @@ from mapping.infomap import infomap
 LINKS_FILE = os.path.join(DATA_FOLDER, 'symmetrized_links.json')
 FINAL_INDEX_FILE = os.path.join(DATA_FOLDER, 'final_index.json')
 REVERSE_INDEX_FILE = os.path.join(DATA_FOLDER, 'reverse_index.json')
-CONFLICT_SCORES = os.path.join(DATA_FOLDER, '0520_finalMscores.json')
+CONFLICT_SCORES = os.path.join(DATA_FOLDER, 'Nscores.json')
 HIERARCHICAL_CLUSTER_FILE = os.path.join(DATA_FOLDER, 'hierarchical_clusters.json')
 
 
@@ -39,10 +39,9 @@ if __name__ == '__main__':
 
     t_start = time()
 
-    wars = json.load(open(CONFLICT_SCORES))
-    wars = sorted([k for k in wars], key=lambda x: wars[x], reverse=True)
+    scores = json.load(open(CONFLICT_SCORES))
+    wars = sorted([k for k in scores], key=lambda x: scores[x], reverse=True)
 
-    wars_10000 = wars[0:10000]
     print(len(wars))
     print('done')
     index = json.load(open(FINAL_INDEX_FILE))
@@ -51,7 +50,6 @@ if __name__ == '__main__':
     print('done')
     wars = [index[item] for item in wars if item in index]
     filter_index = {k: i for i, k in enumerate(wars)}
-    wars_10000 = [index[item] for item in wars_10000 if index[item] is not None]
     print(len(wars))
     print('done')
     wars_links = json.load(open(LINKS_FILE))
@@ -66,7 +64,7 @@ if __name__ == '__main__':
     print('done')
 
     clusterer = infomap.Infomap(
-        str("--directed --zero-based-numbering  --tune-iteration-threshold  1e-5 --markov-time 1"))
+        str("--directed --zero-based-numbering  --tune-iteration-threshold  1e-5 --markov-time 0.8"))
     indexed_citations = wars_links
     for article, citations in indexed_citations.items():
         if article in filter_index:
@@ -93,7 +91,20 @@ if __name__ == '__main__':
                     current_list.append([])
                     current_list = current_list[-1]
             try:
-                current_list.append(reverse_index[int(node.data.name)])
+                title = reverse_index[int(node.data.name)]
+                current_list.append({'title': title, 'score': scores[title]})
+                if title == "Alexander Waibel":
+                    print("AW = {}".format(scores[title]))
+                if title == "Angela Merkel":
+                    print("AM = {}".format(scores[title]))
+                if title == "Paris":
+                    print("Paris = {}".format(scores[title]))
+                if title == "Karlsruhe":
+                    print("Karlsruhe = {}".format(scores[title]))
+                if title == "Horst F. Pampel":
+                    print("Horst F. Pampel = {}".format(scores[title]))
+                if title == "Zeit des Nationalsozialismus":
+                    print("Zeit des Nationalsozialismus = {}".format(scores[title]))
             except KeyError:
                 missing += 1
                 print(node.data.name)
@@ -102,7 +113,9 @@ if __name__ == '__main__':
             if node.path()[0] != current_upper_cluster:
                 current_upper_cluster = node.path()[0]
 
+    print(total_elements(hierarchical_clusters))
     recursive_sort(hierarchical_clusters)
+    # print(hierarchical_clusters)
 
     json.dump(hierarchical_clusters, open(HIERARCHICAL_CLUSTER_FILE, 'w'), indent=2)
     print('clusters dumped')

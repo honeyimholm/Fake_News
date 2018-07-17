@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from settings import DATA_FOLDER
-from api_wrapper import toxicity_score
+from toxicity_api_wrapper import toxicity_score
 
 DATABASE_PATH = os.path.join(DATA_FOLDER, 'WikiDB.db')
 TOXICITY_THRESHOLD = .25

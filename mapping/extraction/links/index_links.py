@@ -9,7 +9,7 @@ from codecs import open
 from settings import DATA_FOLDER
 from settings import RAW_FOLDER
 
-SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20180520-pages-articles-multistream.xml')
+SOURCE_FILE = os.path.join(RAW_FOLDER, 'dewiki-20180620-pages-meta-current.xml')
 DISAMBIGUATION_FILE = os.path.join(RAW_FOLDER, 'disambiguations.json')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, 'links.txt')
 INDEX_FILE = os.path.join(DATA_FOLDER, 'index.json')

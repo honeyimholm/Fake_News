@@ -37,7 +37,7 @@ def clean_backslashes(user_name):
 
 if __name__ == '__main__':
 
-    sockpuppet_dictionary = json.load(open(os.path.join(DATA_FOLDER, 'sockpuppets_1605.json')))
+    sockpuppet_dictionary = json.load(open(os.path.join(DATA_FOLDER, 'sockpuppets_0507.json')))
 
     start_time = time()
 
@@ -71,4 +71,4 @@ if __name__ == '__main__':
             print(i)
             print(time() - start_time)
 
-    json.dump(contrib_dict, open(os.path.join(DATA_FOLDER, 'sockpuppet_contributions_1605.json'), 'w'), indent=2, ensure_ascii=False)
+    json.dump(contrib_dict, open(os.path.join(DATA_FOLDER, 'sockpuppet_contributions_0507.json'), 'w'), indent=2, ensure_ascii=False)
