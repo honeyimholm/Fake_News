@@ -34,3 +34,29 @@ def get_M(article_revisions):
         next_user = revision[0]
 
     return M, reversions, user_edit_counts
+
+
+def get_N_enwiki(article_revisions):
+
+    M = 0
+    user_edit_counts = Counter([revision[0] for revision in article_revisions])
+    sha1_dict = {}
+    reversions = []
+    next_user = None
+
+    for revision in reversed(article_revisions):
+
+        try:
+            user_pair = (next_user, sha1_dict[revision[2]])
+            if user_pair[0] != user_pair[1]:
+                reversions.append(user_pair)
+                M += min(user_edit_counts[user_pair[0]], user_edit_counts[user_pair[1]])
+        except KeyError:
+            pass
+
+        sha1_dict[revision[2]] = revision[0]
+        next_user = revision[0]
+
+    N = M / max(sum(user_edit_counts.values()), 100) * len({reversion[0] for reversion in reversions})
+
+    return N

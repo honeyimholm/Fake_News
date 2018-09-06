@@ -13,6 +13,7 @@ M_FILE = os.path.join(DATA_FOLDER, 'Mscores.json')
 N_FILE = os.path.join(DATA_FOLDER, 'Nscores.json')
 REDIRECT_FILE = os.path.join(DATA_FOLDER, 'redirects.json')
 REVERSION_FILE = os.path.join(DATA_FOLDER, 'reversions.json')
+PERCENTILE = 90
 
 
 def get_N(reversions, user_edit_counts):
@@ -20,7 +21,7 @@ def get_N(reversions, user_edit_counts):
     # reversions = {reversion for reversion in reversions if (reversion[1], reversion[0]) in reversions}
     scores = [min(user_edit_counts[reversion[0]], user_edit_counts[reversion[1]]) for reversion in reversions]
     if len(scores) > 0:
-        return (sum(scores) - max(scores)) / max(sum(user_edit_counts.values()), 100)
+        return sum(scores) / max(sum(user_edit_counts.values()), 100) * len({reversion[0] for reversion in reversions})
     else:
         return 0
 
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     reversion_dictionary = {}
     redirects = json.load(open(REDIRECT_FILE, 'r'))
     M_scores = json.load(open(M_FILE))
-    m_threshold = np.percentile([sum(score['scores']) for score in M_scores.values()], 90)
+    m_threshold = np.percentile([sum(score['scores']) for score in M_scores.values()], PERCENTILE)
     for i, (title, dump) in enumerate(file_iterator(SOURCE_FILE)):
         M, reversions, user_edit_counts = get_M(json.loads(dump))
         try:
@@ -59,9 +60,13 @@ if __name__ == '__main__':
         except KeyError:
             reversion_dictionary[redirected_title] = (reversions, user_edit_counts)
             articles += 1
+        if articles % 1000 == 0:
+            print(articles)
+            print(time() - start_time)
     print(time() - start_time)
     final_scores_dictionary = {title: get_N(items[0], items[1]) for title, items in reversion_dictionary.items()}
     print(time() - start_time)
+    print('dumping')
     with open(N_FILE, 'w') as g:
         json.dump(final_scores_dictionary, g, ensure_ascii=False, indent=2)
     reversion_dictionary = {title: items[0] for title, items in reversion_dictionary.items()}

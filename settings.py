@@ -6,7 +6,7 @@ LOCAL_DATA_FOLDER = os.path.join(dir, os.path.join('..', 'Wikidumps'))
 DISK_DATA_FOLDER = '/media/teven/TOSHIBA/Wikidumps/'
 
 SUPPORTED_LANGUAGES = ['EN', 'FR', 'DE']
-LANGUAGE = "DE"
+LANGUAGE = "FR"
 
 if LANGUAGE not in SUPPORTED_LANGUAGES:
     raise ValueError('Language {} not supported'.format(LANGUAGE))
@@ -19,6 +19,8 @@ if LANGUAGE == "DE":
 
 DATA_FOLDER = os.path.join(LANGUAGE_FOLDER, 'processed')
 RAW_FOLDER = os.path.join(LANGUAGE_FOLDER, 'raw')
+INTERLINGUAL_FOLDER = os.path.join(DISK_DATA_FOLDER, 'interlingual')
+
 API_KEY = open(os.path.join(DISK_DATA_FOLDER, 'API_KEY.txt')).read()
 
 print(LANGUAGE)

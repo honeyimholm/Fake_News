@@ -92,7 +92,7 @@ if __name__ == '__main__':
     article_indexes = {}
     redirect_references = {}
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        for i, (title, id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
+        for i, (title, article_id, text, redirect) in enumerate(article_generator(SOURCE_FILE)):
             if i % 10000 == 0:
                 print(i)
                 print(time.time() - start_time)
