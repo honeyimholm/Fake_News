@@ -6,7 +6,7 @@ LOCAL_DATA_FOLDER = os.path.join(dir, os.path.join('..', 'Wikidumps'))
 DISK_DATA_FOLDER = '/media/teven/TOSHIBA/Wikidumps/'
 
 SUPPORTED_LANGUAGES = ['EN', 'FR', 'DE']
-LANGUAGE = "DE"
+LANGUAGE = "EN"
 
 if LANGUAGE not in SUPPORTED_LANGUAGES:
     raise ValueError('Language {} not supported'.format(LANGUAGE))

@@ -6,7 +6,7 @@ import json
 from codecs import open
 
 from settings import DATA_FOLDER, LOCAL_DATA_FOLDER, RAW_FOLDER
-from src.mapping.extraction.revisions.get_revisions_hackish import article_generator
+from mapping.extraction.revisions.get_revisions_hackish import article_generator
 
 SOURCE_FILE = os.path.join(RAW_FOLDER, 'enwiki-20180520-stub-meta-history.xml')
 OUTPUT_FILE = os.path.join(DATA_FOLDER, 'revisions.txt')

@@ -3,7 +3,6 @@ import json
 from codecs import open
 import requests
 import re
-import datetime
 from collections import OrderedDict
 
 from bs4 import BeautifulSoup, Tag

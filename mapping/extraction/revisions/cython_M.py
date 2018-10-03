@@ -4,7 +4,7 @@ import os
 import json
 
 from settings import DATA_FOLDER, LOCAL_DATA_FOLDER, RAW_FOLDER, LANGUAGE
-from src.mapping.extraction.revisions.get_M import file_iterator, get_M, get_N_enwiki
+from mapping.extraction.revisions.get_M import file_iterator, get_M, get_N_enwiki
 
 
 SOURCE_FILE = os.path.join(DATA_FOLDER, 'revisions.txt')

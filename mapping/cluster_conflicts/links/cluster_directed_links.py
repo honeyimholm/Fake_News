@@ -139,7 +139,7 @@ if __name__ == '__main__':
     t_start = time()
 
     scores = json.load(open(CONFLICT_SCORES))
-    first_threshold = np.percentile(list(scores.values()), FIRST_PERCENTILE)
+    articles_to_cluster = [article for article in scores if scores[article] > first_threshold]
     second_threshold = np.percentile(list(scores.values()), SECOND_PERCENTILE)
     print(second_threshold)
     articles_to_cluster = [article for article in scores if scores[article] > first_threshold]
