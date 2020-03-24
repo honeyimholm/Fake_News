@@ -5,7 +5,7 @@ backports.shutil-get-terminal-size==1.0.0
 backports.ssl-match-hostname==3.5.0.1
 bcdoc==0.12.2
 beautifulsoup4==4.6.0
-bleach==2.1.1
+bleach==3.1.2
 boto==2.33.0
 botocore==0.73.0
 bs4==0.0.1
